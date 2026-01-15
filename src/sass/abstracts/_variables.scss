@@ -2,23 +2,32 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
-
-
-
-
 /// Regular font family
 /// @type List
-$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$text-font-stack: "Roboto", sans-serif;
 
 /// Code (monospace) font family
 /// @type List
 $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
 
 // Colores:
+$text-color: #fff;
+$text-color-secundary: #6b7280;
+$text-color-tertiary: #9ca3af;
+$bg-iconos: #1f2937;
+$green: #22c55e;
+$green-op: #22c55e1a;
+$bg-btn: #FFD60033;
+$bg-btn-hero: #ffffff1a;
+$yellow: #FFD600;
+$yellow-op: #fef08a;
+$bd-color: #e5e7eb;
+$bg-body: #090909;
+$black-op: #181818;
 
 /// Container's maximum width
 /// @type Length
-$max-width: 1180px !default;
+$max-width: 1280px !default;
 
 
 /// Breakpoints map
@@ -27,7 +36,7 @@ $max-width: 1180px !default;
 $breakpoints: (
 	'small': 320px,
 	'medium': 768px,
-	'large': 1024px,
+	'large': 1440px,
 );
 
 /// Relative or absolute URL where all assets are served from
@@ -35,3 +44,5 @@ $breakpoints: (
 /// @example scss - When using a CDN
 ///   $base-url: 'https://cdn.example.com/assets/';
 $base-url: '/assets/' !default;
+///
+

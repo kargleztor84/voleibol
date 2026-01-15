@@ -2,13 +2,55 @@
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Projects SASS con VITE</title>
+		<title>Es Castell | Voleibol Menorca</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 	</head>
 	<body>
-		<h1>template projects</h1>
-		
+		<header class="header">
+			<div class="container">
+				<nav class="header__nav">
+					<a href="#" class="header__nav--logo">
+						es castell
+					</a>
+
+					<section class="header__nav--toggle">
+						<input type="checkbox" id="estado" class="header__nav--toggle__input">
+
+						<label for="estado" class="header__nav--toggle__icon">
+						</label>
+					</section>
+
+					<ul class="header__nav--list">
+						<li class="header__nav--list__li">
+							<a href="#" class="nav __link">inicio</a>
+						</li>
+						<li class="header__nav--list__li">
+							<a href="#" class="nav __link">equipo</a>
+						</li>
+						<li class="header__nav--list__li">
+							<a href="#" class="nav __link">fichajes</a>
+						</li>
+						<li class="header__nav--list__li">
+							<a href="#" class="nav __link">calendario</a>
+						</li>
+						<li class="header__nav--list__li">
+							<a href="#" class="nav __link">partidos</a>
+						</li>
+						<li class="header__nav--list__li">
+							<a href="#" class="nav __link">noticias</a>
+						</li>
+						<li class="header__nav--list__li">
+							<a href="#" class="nav __link">contacto</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
 		<script type="module" src="/src/app.js"></script>
 	</body>
 </html>

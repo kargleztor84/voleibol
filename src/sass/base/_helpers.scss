@@ -55,3 +55,15 @@
   position: absolute;
   width: 1px;
 }
+
+.event-toggle {
+  &:has(.header__nav--toggle__input:checked) {
+    .header__nav--toggle__icon {
+        background-image: url(../../../img/sierre.svg);
+    }
+
+    .header__nav--list {
+        transform: translateX(0%);
+    }
+  }
+}
