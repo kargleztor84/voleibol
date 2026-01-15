@@ -1,0 +1,11 @@
+@use '../abstracts' as ab;
+@use '../base/helpers' as hp;
+
+.main {
+    background: url(../../../img/hero_img.jpg) center/cover;
+
+    &__hero {
+        background-image: linear-gradient(190deg,#000000af, #000000);
+        height: 100vh;
+    }
+}

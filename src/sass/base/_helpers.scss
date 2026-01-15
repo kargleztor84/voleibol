@@ -45,6 +45,7 @@
  * Shamelessly borrowed from HTML5Boilerplate:
  * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
  */
+
 .visually-hidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -57,13 +58,15 @@
 }
 
 .event-toggle {
-  &:has(.header__nav--toggle__input:checked) {
-    .header__nav--toggle__icon {
-        background-image: url(../../../img/sierre.svg);
+  &:has(.header__nav__input:checked) {
+    .header__nav__icon {
+      background-image: url(../../../img/sierre.svg);
     }
 
-    .header__nav--list {
-        transform: translateX(0%);
+    .header__nav__list {
+      // opacity: 1;
+      transform: translateX(0);
+      pointer-events: auto;
     }
   }
 }
