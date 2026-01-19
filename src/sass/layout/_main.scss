@@ -14,16 +14,23 @@
         align-content: center;
         padding-top: 80px;
 
-        // Titulo encima del encabezado ---
+        // Contenedor de eapaceado ---
+        .container {
+            display: grid;
+            text-align: center;
+        }
+
+        // Titulo encima del encabezado --
         &__ontitle {
-            width: max-content;
+            width: 165px;
             text-transform: uppercase;
             font-size: 12px;
             font-style: italic;
             border-radius: 20px;
-            border: .5px solid ab.$yellow;
+            border: .5px solid ab.$yellow-op;
             padding-right: 10px;
             background-color: ab.$bg-btn;
+            @include ab.inline(auto);
             margin-bottom: ab.m-all('suma', 5);
 
             display: grid;
@@ -31,9 +38,10 @@
             align-items: center;
         }
 
-        // Encabezado h1 title ---
+        // Encabezado h1 title --
         &__title {
             max-width: 550px;
+            @include ab.inline(auto);
             font-family: ab.$title;
             font-size: ab.$size-title;
             font-weight: 900;
@@ -41,56 +49,66 @@
             letter-spacing: -2px;
             text-transform: uppercase;
             color: ab.$heading-color;
-            margin-bottom: ab.$mb;
         }
 
-        // Span dentro del h1 --
+        // Span dentro del h1 -
         &__span {
             background-image: linear-gradient(to right, #efa12d 40%, #ffffff);
             color: transparent;
             background-clip: text;
         }
 
-        //  Encabezado h2 subtitle ---
         &__subtitle {
-            font-size: ab.$size-subtitle;
-            font-family: ab.$sub-title;
+            font-size: 20px;
             text-transform: capitalize;
-            display: inline-flex;
+            word-spacing: 3px;
+            letter-spacing: 4px;
+            color: white;
             margin-bottom: ab.$mb;
         }
 
-        // Texto debajo del encabezado ---
+        //  Encabezado h2 --
+        &__h2 {
+            font-size: ab.$size-title;
+            font-family: ab.$sub-title;
+            font-weight: 400;
+            display: inline-flex;
+            margin-bottom: ab.$mb;
+            @include ab.inline(auto);
+        }
+
+        // Texto debajo del encabezado --
         &__text {
             max-width: 300px;
+            @include ab.inline(auto);
             margin-bottom: ab.m-all('suma', 10);
         }
 
-        // Contenedor de botones ---
+        // Contenedor de botones --
         &__container {
             display: grid;
         }
 
-        // Estilos generales de los botones ---
+        // Estilos generales de los botones --
         &__btn {
+            @include ab.inline(auto);
             color: ab.$bg-body;
             font-weight: 700;
             font-size: 16px;
             border-radius: 8px;
         }
 
-        // btn uno --
+        // btn uno -
         .uno {
             background-color: ab.$yellow;
             padding: 10px 30px;
-            width: ab.$width-container;
-            margin-right: 20px;
+            width: 182px;
             margin-bottom: ab.$mb;
         }
 
-        // btn dos --
+        // btn dos -
         .dos {
-            width: ab.$width-container;
+            width: 185px;
             background-color: ab.$bg-btn-hero;
             color: ab.$text-color;
             border: .5px solid ab.$text-color-tertiary;
@@ -115,10 +133,8 @@
 
         article {
             flex: 1;
-            padding: 20px;
+            padding: 30px 10px;
             text-align: center;
-            text-transform: capitalize;
-            font-style: italic;
 
             h3 {
                 font-size: 30px;

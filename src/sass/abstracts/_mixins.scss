@@ -35,3 +35,9 @@
     @content;
   }
 }
+
+@mixin inline($value) {
+  & {
+    margin-inline: $value;
+  }
+};
