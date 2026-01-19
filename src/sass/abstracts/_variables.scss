@@ -15,8 +15,8 @@ $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
 // Colores:
 $heading-color: white;
 $text-color: #e5e7eb;
-$text-color-secundary: #6b7280;
-$text-color-tertiary: #9ca3af;
+$text-color-secundary: #4f60818a;
+$text-color-tertiary: #9ca3af74;
 $bg-iconos: #1f2937;
 $green: #22c55e;
 $green-op: #22c55e1a;
@@ -26,7 +26,7 @@ $yellow: #efa22d;
 $yellow-op: #efa12dc9;
 $bd-color: #3b82f680;
 $bg-body: #090909;
-$black-op: #050505b4;
+$black-op: #1413138b;
 
 /// Container's maximum width
 /// @type Length
@@ -41,6 +41,8 @@ $line-title: clamp(45px, 19.24px + 6.86vw, 72px);
 $size-subtitle: clamp(32px, 9px + 6.12vw, 56px);
 // Size text
 $size-text: clamp(16px, 14px + 0.524vw, 18px);
+// Ancho de contenedor
+$width-container: max-content;
 
 
 /// Breakpoints map
@@ -58,4 +60,3 @@ $breakpoints: (
 ///   $base-url: 'https://cdn.example.com/assets/';
 $base-url: '/assets/' !default;
 ///
-

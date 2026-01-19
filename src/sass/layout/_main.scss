@@ -2,7 +2,7 @@
 @use '../base/helpers' as hp;
 
 .main {
-    
+    // HERO SECTION -->
     &__hero {
         font-size: ab.$size-text;
         background-image: linear-gradient(200deg,#00000091, #000000), url(../../../img/hero.jpg);
@@ -12,7 +12,9 @@
         height: 100vh;
         display: grid;
         align-content: center;
+        padding-top: 80px;
 
+        // Titulo encima del encabezado ---
         &__ontitle {
             width: max-content;
             text-transform: uppercase;
@@ -29,6 +31,7 @@
             align-items: center;
         }
 
+        // Encabezado h1 title ---
         &__title {
             max-width: 550px;
             font-family: ab.$title;
@@ -41,12 +44,14 @@
             margin-bottom: ab.$mb;
         }
 
+        // Span dentro del h1 --
         &__span {
             background-image: linear-gradient(to right, #efa12d 40%, #ffffff);
             color: transparent;
             background-clip: text;
         }
 
+        //  Encabezado h2 subtitle ---
         &__subtitle {
             font-size: ab.$size-subtitle;
             font-family: ab.$sub-title;
@@ -55,36 +60,59 @@
             margin-bottom: ab.$mb;
         }
 
+        // Texto debajo del encabezado ---
         &__text {
             max-width: 300px;
             margin-bottom: ab.m-all('suma', 10);
         }
 
+        // Contenedor de botones ---
         &__container {
             display: grid;
         }
 
+        // Estilos generales de los botones ---
         &__btn {
             color: ab.$bg-body;
             font-weight: 700;
-            font-size: 14px;
+            font-size: 16px;
             border-radius: 8px;
         }
-        
+
+        // btn uno --
         .uno {
             background-color: ab.$yellow;
-            padding: 10px 25px;
-            width: max-content;
+            padding: 10px 30px;
+            width: ab.$width-container;
             margin-right: 20px;
             margin-bottom: ab.$mb;
         }
 
+        // btn dos --
         .dos {
-            width: max-content;
+            width: ab.$width-container;
             background-color: ab.$bg-btn-hero;
             color: ab.$text-color;
-            border: .5px solid ab.$text-color-secundary;
-            padding: 10px 15px;
+            border: .5px solid ab.$text-color-tertiary;
+            padding: 10px 20px;
+        }
+    }
+
+    // DATOS SECTION -->
+    &__datos {
+        background-color: ab.$black-op;
+        border-block: 1px solid ab.$text-color-secundary;
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            place-items: center;
+        }
+
+        article {
+            padding: 30px;
+            text-align: center;
+
         }
     }
 }
