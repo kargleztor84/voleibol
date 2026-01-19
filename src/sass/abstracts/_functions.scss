@@ -1,3 +1,4 @@
+@use './variables' as vb;
 // -----------------------------------------------------------------------------
 // This file contains all application-wide Sass functions.
 // -----------------------------------------------------------------------------
@@ -27,4 +28,20 @@
 /// @require $base-url
 @function font($path, $base: $base-url) {
   @return asset($base, 'fonts/', $path);
+}
+
+@function m-all($operacion, $medida) {
+  @if $operacion == 'resta' {
+    $margin: vb.$mb - $medida;
+    @return $margin;
+  } @else if $operacion == 'suma' {
+    $margin: vb.$mb + $medida;
+    @return $margin;
+  } @else if $operacion == 'mult' {
+    $margin: vb.$mb * $medida;
+    @return $margin;
+  } @else if $operacion == 'divi' {
+    $margin: vb.$mb / $medida;
+    @return $margin;
+  }
 }

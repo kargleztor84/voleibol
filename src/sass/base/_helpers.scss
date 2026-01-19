@@ -64,9 +64,14 @@
     }
 
     .header__nav__list {
-      // opacity: 1;
-      transform: translateX(0);
       pointer-events: auto;
+      clip-path: inset(0);
     }
+  }
+}
+
+.hover-event {
+  &:hover {
+    color: abstracts.$yellow;
   }
 }

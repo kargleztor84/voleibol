@@ -23,10 +23,8 @@
 a {
   text-decoration: none;
   color: abstracts.$text-color;
-
-  &:hover {
-    color: abstracts.$yellow;
-  }
+  transition: color .3s ease;
+  display: inline-flex;
 }
 
 li {

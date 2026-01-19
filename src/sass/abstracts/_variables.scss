@@ -4,30 +4,43 @@
 
 /// Regular font family
 /// @type List
-$text-font-stack: "Roboto", sans-serif;
+$text-font-stack: "Nobile", sans-serif;
+$title: "Roboto Condensed", sans-serif;
+$sub-title: "Bubbler One", sans-serif;
 
 /// Code (monospace) font family
 /// @type List
 $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
 
 // Colores:
-$text-color: #fff;
+$heading-color: white;
+$text-color: #e5e7eb;
 $text-color-secundary: #6b7280;
 $text-color-tertiary: #9ca3af;
 $bg-iconos: #1f2937;
 $green: #22c55e;
 $green-op: #22c55e1a;
-$bg-btn: #ffd50048;
+$bg-btn: rgba(255, 213, 0, 0.282);
 $bg-btn-hero: #ffffff1a;
 $yellow: #efa22d;
 $yellow-op: #efa12dc9;
-$bd-color: #e5e7eb;
+$bd-color: #3b82f680;
 $bg-body: #090909;
-$black-op: #18181842;
+$black-op: #050505b4;
 
 /// Container's maximum width
 /// @type Length
-$max-width: 1280px !default;
+$max-width: 1200px !default;
+
+// Medidas
+$mb: 10px;
+// Size title
+$size-title: clamp(54px, 21.52px + 8.66vw, 88px);
+$line-title: clamp(45px, 19.24px + 6.86vw, 72px);
+// Size subtilte
+$size-subtitle: clamp(32px, 9px + 6.12vw, 56px);
+// Size text
+$size-text: clamp(16px, 14px + 0.524vw, 18px);
 
 
 /// Breakpoints map

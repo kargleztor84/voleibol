@@ -2,10 +2,89 @@
 @use '../base/helpers' as hp;
 
 .main {
-    background: url(../../../img/hero_img.jpg) center/cover;
-
+    
     &__hero {
-        background-image: linear-gradient(190deg,#000000af, #000000);
+        font-size: ab.$size-text;
+        background-image: linear-gradient(200deg,#00000091, #000000), url(../../../img/hero.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center top;
         height: 100vh;
+        display: grid;
+        align-content: center;
+
+        &__ontitle {
+            width: max-content;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-style: italic;
+            border-radius: 20px;
+            border: .5px solid ab.$yellow;
+            padding-right: 10px;
+            background-color: ab.$bg-btn;
+            margin-bottom: ab.m-all('suma', 5);
+
+            display: grid;
+            grid-template-columns: 20px 1fr;
+            align-items: center;
+        }
+
+        &__title {
+            max-width: 550px;
+            font-family: ab.$title;
+            font-size: ab.$size-title;
+            font-weight: 900;
+            line-height: ab.$line-title;
+            letter-spacing: -2px;
+            text-transform: uppercase;
+            color: ab.$heading-color;
+            margin-bottom: ab.$mb;
+        }
+
+        &__span {
+            background-image: linear-gradient(to right, #efa12d 40%, #ffffff);
+            color: transparent;
+            background-clip: text;
+        }
+
+        &__subtitle {
+            font-size: ab.$size-subtitle;
+            font-family: ab.$sub-title;
+            text-transform: capitalize;
+            display: inline-flex;
+            margin-bottom: ab.$mb;
+        }
+
+        &__text {
+            max-width: 300px;
+            margin-bottom: ab.m-all('suma', 10);
+        }
+
+        &__container {
+            display: grid;
+        }
+
+        &__btn {
+            color: ab.$bg-body;
+            font-weight: 700;
+            font-size: 14px;
+            border-radius: 8px;
+        }
+        
+        .uno {
+            background-color: ab.$yellow;
+            padding: 10px 25px;
+            width: max-content;
+            margin-right: 20px;
+            margin-bottom: ab.$mb;
+        }
+
+        .dos {
+            width: max-content;
+            background-color: ab.$bg-btn-hero;
+            color: ab.$text-color;
+            border: .5px solid ab.$text-color-secundary;
+            padding: 10px 15px;
+        }
     }
 }

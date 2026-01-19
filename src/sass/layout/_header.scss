@@ -6,8 +6,9 @@
 .header {
     width: 100%;
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.922);
-    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom: .5px solid ab.$bd-color;
+    // box
 }
 
 .header__nav {
@@ -17,24 +18,27 @@
     padding-block: 20px;
 
     &__logo {
-        width: 150px;
+        width: 250px;
         position: relative;
-        padding-left: 50px;
+        padding-top: 3px;
+        padding-left: 40px;
         text-transform: uppercase;
         font-size: 20px; 
         font-weight: 900;
-        line-height: 20px;
+        line-height: 15px;
+
+        @extend .hover-event;
     }
 
     &__logo::before {
         content: '';
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
         background: url("../../../img/icon_escatell.png") center/cover no-repeat;
         position: absolute;
-        top: 0;
+        top: -7px;
         left: 0;
-        border-radius: 30%;
+        border-radius: 50%;
     }
 
     @extend .event-toggle;
@@ -59,27 +63,28 @@
         background: url(../../../img/menu.svg) center/contain no-repeat;
         z-index: 1;
         cursor: pointer;
-        transition: background .5s ease-in-out;
+        transition: .5s ease-in-out;
     }
 
     &__list {
+        backdrop-filter: blur(6px);
         position: fixed;
-        top: 80px;
+        top: 72px;
         right: 0;
-        background-color: ab.$bg-btn;
-        width: min(50%, 320px);
-        // height: 40vh;
+        background-color: ab.$black-op;
+        width: min(45%, 420px);
+        height: 100vh;
         text-transform: uppercase;
-        border-radius: 20px 0 0 20px;
-        display: grid;
-        gap: 10px;
-        padding: 20px;
-        // opacity: 0;
-        transform: translateX(100%);
+        padding: 50px 30px;
         pointer-events: none;
-        transition:
-        opacity 0.35s ease,
-        transform 0.25s ease;
-        backdrop-filter: blur(8px);
+        display: grid;
+        grid-template-rows: repeat(7, 60px);
+
+        clip-path: inset(0 0 0 100%);
+        transition: clip-path 0.4s ease;
+
+        a {
+            @extend .hover-event; 
+        }
     }
 }
