@@ -22,7 +22,8 @@ $green: #22c55e;
 $green-op: #22c55e1a;
 $bg-btn: rgba(255, 213, 0, 0.282);
 $bg-btn-hero: #ffffff1a;
-$yellow: #efa22d;
+$origin-yellow: #fbc02d;
+$yellow: #fbc02d;
 $yellow-op: #efa12d91;
 $bd-color: #3b82f680;
 $bg-body: #090909;
@@ -36,6 +37,7 @@ $max-width: 1200px !default;
 $mb: 10px;
 // Size title
 $size-title: clamp(54px, 21.52px + 8.66vw, 88px);
+$size-title-v1: clamp(47px, 17.71px + 9.15vw, 88px);
 $line-title: clamp(45px, 19.24px + 6.86vw, 72px);
 // Size subtilte
 $size-subtitle: clamp(32px, 9px + 6.12vw, 56px);

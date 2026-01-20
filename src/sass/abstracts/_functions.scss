@@ -44,7 +44,6 @@
     $margin: vb.$mb / $medida;
     @return $margin;
   } @else if $operacion == false {
-    $margin: $medida;
     @return $margin;
   }
 }
