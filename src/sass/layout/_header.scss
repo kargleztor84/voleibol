@@ -8,8 +8,9 @@
 .header {
     width: 100%;
     position: fixed;
-    background-color: #000000ec;
+    background-color: #000000e5;
     border-bottom: .5px solid ab.$bd-color;
+    backdrop-filter: blur(8px);
 }
 
 .header__nav {
@@ -71,7 +72,6 @@
     }
 
     &__list {
-        backdrop-filter: blur(6px);
         position: fixed;
         top: 70px;
         right: 0;

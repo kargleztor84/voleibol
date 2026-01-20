@@ -30,7 +30,7 @@
   @return asset($base, 'fonts/', $path);
 }
 
-@function m-all($operacion, $medida) {
+@function m-all($operacion: false, $medida: 0) {
   @if $operacion == 'resta' {
     $margin: vb.$mb - $medida;
     @return $margin;
@@ -42,6 +42,9 @@
     @return $margin;
   } @else if $operacion == 'divi' {
     $margin: vb.$mb / $medida;
+    @return $margin;
+  } @else if $operacion == false {
+    $margin: $medida;
     @return $margin;
   }
 }

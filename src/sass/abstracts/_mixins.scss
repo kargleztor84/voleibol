@@ -36,7 +36,7 @@
   }
 }
 
-@mixin inline($value) {
+@mixin inline($value: auto) {
   & {
     margin-inline: $value;
   }
