@@ -5,5 +5,7 @@ export default defineConfig ({
         hmr: {
             overlay: false,
         }
-    }
+    },
+
+    base: 'https://kargleztor84.github.io/voleibol'
 })
