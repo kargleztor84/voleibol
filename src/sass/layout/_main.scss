@@ -121,7 +121,7 @@
     &__datos {
         background-color: ab.$black-op;
         border-block: 1px solid ab.$text-color-secundary;
-        margin-bottom: ab.m-all('suma', 40);
+        margin-bottom: 50px;
 
         .container {
             display: flex;
@@ -156,8 +156,17 @@
         }
     }
 
-    // Seccion de jugadores -->
+    // SECCION DE JUGADORES -->
     &__players {
+        margin-bottom: 70px;
+        
+        .container {
+            flex-wrap: wrap;
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 1fr;
+        }
+        
         &__text {
             h3 {
                 font-size: ab.$size-subtitle;
@@ -169,5 +178,52 @@
                 display: none;
             }
         }
+
+        &__photos {
+            width: 335px;
+            aspect-ratio: 4 / 5;
+            border: 1px solid ab.$text-color-secundary;
+            border-radius: 10px;
+            background-image: linear-gradient(#fcc0281e, #1b1a1a6c);
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__info {
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
     }
+
+    // SECCION VIDEO -->
+    &__video {
+        padding-block: 50px;
+
+        h4 {
+            font-size: 20px;
+        }
+
+        &__youtube {
+            padding-bottom: 25px;
+        }
+
+        &__game {
+            font-size: 14px;
+            background-color: #3136408a;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            place-items: center;
+            border-radius: 10px;
+
+            div {
+                padding: 20px;
+            }
+
+            div+div {
+                border-left: 1px solid ab.$text-color-secundary;
+            }
+        }
+    }
+    
 }
