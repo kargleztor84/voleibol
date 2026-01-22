@@ -15,11 +15,11 @@ $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
 // Colores:
 $heading-color: white;
 $text-color: #e5e7eb;
-$text-color-secundary: #4f60818a;
+$text-color-secundary: #4f608172;
 $text-color-tertiary: #9ca3af74;
 $bg-iconos: #1f2937;
 $green: #22c55e;
-$green-op: #22c55e1a;
+$green-op: #22c55e86;
 $bg-btn: rgba(255, 213, 0, 0.282);
 $bg-btn-hero: #ffffff1a;
 $origin-yellow: #fbc02d;
@@ -53,7 +53,8 @@ $width-container: max-content;
 $breakpoints: (
 	'small': 320px,
 	'medium': 768px,
-	'large': 1440px,
+	'large': 1024px,
+	'x-l': 1440px,
 );
 
 /// Relative or absolute URL where all assets are served from

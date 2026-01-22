@@ -1,4 +1,5 @@
-// @use '../abstracts' as ab;
+@use './variables' as vb;
+@use 'sass:map';
 
 // -----------------------------------------------------------------------------
 // This file contains all application-wide Sass mixins.
@@ -41,3 +42,16 @@
     margin-inline: $value;
   }
 };
+
+// Query solo para el header -->
+@mixin query_header($breakpoint) {
+  & { @media screen and (width >= map.get(vb.$breakpoints, $breakpoint)) {
+    @content;
+  }}
+}
+// Query para todo -->
+@mixin query($breakpoint) {
+  & { @media screen and (width >= map.get(vb.$breakpoints, $breakpoint)) {
+    @content;
+  }}
+}

@@ -9,10 +9,10 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center top;
-        height: 100vh;
+        height: clamp(667px, 586.29px + 25.22vw, 780px);
         display: grid;
         align-content: center;
-        padding-top: 80px;
+        padding-top: 60px;
 
         // Contenedor de eapaceado ---
         .container {
@@ -161,7 +161,6 @@
         margin-bottom: 70px;
         
         .container {
-            flex-wrap: wrap;
             display: grid;
             gap: 20px;
             grid-template-columns: 1fr;
@@ -224,6 +223,13 @@
                 border-left: .5px solid ab.$text-color-secundary;
             }
         }
+
+        &__fecha {
+            text-align: center;
+        }
+
+        // &__rival {
+        //     color: ab.$yellow;
+        // }
     }
-    
 }

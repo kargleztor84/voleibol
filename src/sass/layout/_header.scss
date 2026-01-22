@@ -9,7 +9,7 @@
     width: 100%;
     position: fixed;
     background-color: #000000e5;
-    border-bottom: .5px solid ab.$bd-color;
+    border-bottom: .5px solid ab.$text-color-secundary;
     backdrop-filter: blur(8px);
 }
 
@@ -21,7 +21,7 @@
 
     // Contenedor del logo ---
     &__logo {
-        width: 250px;
+        width: 230px;
         position: relative;
         padding-top: 3px;
         padding-left: 35px;
@@ -90,5 +90,9 @@
         a {
             @extend .hover-event; 
         }
+    }
+
+    &__unete {
+        display: none;
     }
 }

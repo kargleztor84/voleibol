@@ -1,0 +1,55 @@
+@use '../abstracts' as ab;
+
+.header {
+
+    @include ab.query_header(large) {
+
+        &__nav {
+            padding: 0;
+
+            &__toggle {
+                display: none;
+            }
+    
+            &__list {
+                width: 390px;
+                margin-right: 20px;
+                pointer-events: auto;
+                clip-path: inset(0);
+                position: initial;
+                display: flex;
+                height: initial;
+                padding: 20px 0;
+                background-color: transparent;
+                text-transform: capitalize;
+                font-size: 14px;
+
+                a {
+                    color: #ffffff80;
+                    padding-right: 30px;
+                }
+            }
+
+            &__unete {
+                display: block;
+                position: relative;
+                text-transform: uppercase;
+                font-weight: 600;
+                color: ab.$bg-body;
+                padding: 5px 50px 5px 20px;
+                background-color: ab.$yellow;
+                border-radius: 30px;
+            }
+
+            &__unete::after {
+                content: '';
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                top: 10%;
+                right: 20px;
+                background-image: url(../../../img/arrow-narrow-left.svg);
+            }
+        }
+    }
+}
