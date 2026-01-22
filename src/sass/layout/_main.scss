@@ -204,6 +204,7 @@
         }
 
         &__youtube {
+            flex: 1;
             padding-bottom: 25px;
         }
 
@@ -226,6 +227,7 @@
 
         &__fecha {
             text-align: center;
+            flex: 1;
         }
 
         // &__rival {
