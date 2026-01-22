@@ -46,6 +46,8 @@ $size-text: clamp(16px, 14px + 0.524vw, 18px);
 // Ancho de contenedor
 $width-container: max-content;
 
+// widht con max()
+$max-size: max(335px, 50%);
 
 /// Breakpoints map
 /// @prop {String} keys - Keys are identifiers mapped to a given length
