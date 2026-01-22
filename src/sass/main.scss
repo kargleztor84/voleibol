@@ -12,8 +12,9 @@
 // 3. Layout-related sections
 @use 'layout/footer';
 @use 'layout/header';
-@use 'layout/header_movil';
+@use 'layout/header_large';
 @use 'layout/main';
+@use 'layout/main_tablet';
 
 // 4. Components
 @use 'components/button';

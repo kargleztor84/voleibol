@@ -1,4 +1,5 @@
 @use './variables' as vb;
+
 @use 'sass:map';
 
 // -----------------------------------------------------------------------------
@@ -54,4 +55,31 @@
   & { @media screen and (width >= map.get(vb.$breakpoints, $breakpoint)) {
     @content;
   }}
+}
+
+@mixin btn() {
+  & {
+    display: block;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: vb.$bg-body;
+    padding: 5px 50px 5px 20px;
+    background-color: vb.$yellow;
+    border-radius: 30px;
+    @content;
+  }
+}
+
+@mixin btn-after() {
+  &::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 10%;
+    right: 20px;
+    background-image: url(../../../img/arrow-narrow-left.svg);
+    @content;
+  }
 }

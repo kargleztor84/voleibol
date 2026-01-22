@@ -1,9 +1,7 @@
 @use '../abstracts' as ab;
 
 .header {
-
     @include ab.query_header(large) {
-
         &__nav {
             padding: 0;
 
@@ -31,24 +29,8 @@
             }
 
             &__unete {
-                display: block;
-                position: relative;
-                text-transform: uppercase;
-                font-weight: 600;
-                color: ab.$bg-body;
-                padding: 5px 50px 5px 20px;
-                background-color: ab.$yellow;
-                border-radius: 30px;
-            }
-
-            &__unete::after {
-                content: '';
-                width: 20px;
-                height: 20px;
-                position: absolute;
-                top: 10%;
-                right: 20px;
-                background-image: url(../../../img/arrow-narrow-left.svg);
+                @include ab.btn();
+                @include ab.btn-after();
             }
         }
     }
