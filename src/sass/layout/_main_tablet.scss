@@ -27,6 +27,7 @@
             text-align: start;
 
             &__aboutus {
+                max-width: inherit;
                 display: grid;
                 grid-template-columns: 1fr 2fr;
 
