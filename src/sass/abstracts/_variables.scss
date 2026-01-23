@@ -49,6 +49,9 @@ $width-container: max-content;
 // widht con max()
 $max-size: max(335px, 50%);
 
+// margin-bottom de las secciones
+$mb-sections: 70px;
+
 /// Breakpoints map
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels

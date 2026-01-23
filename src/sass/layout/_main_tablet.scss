@@ -7,9 +7,9 @@
 
             &__text {
                 display: flex;
-                justify-content: space-evenly;
+                justify-content: space-between;
                 align-items: center;
-                margin-bottom: 20px;
+                margin-bottom: 40px;
 
                 h3 {
                     margin: 0;
@@ -34,6 +34,11 @@
                 figure {
                     background-image: linear-gradient(to right,#0000006c, #000000);
                     border-radius: 30px 0 0 30px;
+
+                    img {
+                        object-fit: cover;
+                        transform: rotateY(180deg);
+                    }
                 }
 
                 p {
