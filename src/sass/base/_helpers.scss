@@ -104,3 +104,15 @@
     background-image: url(../../../img/arrow-narrow-left.svg);
   }
 }
+
+.hover-card {
+  &:hover{
+    .main__players__info {
+      pointer-events: auto;
+      clip-path: inset(0);
+    }
+    img {
+      transform: scale(1);
+    }
+  }
+}

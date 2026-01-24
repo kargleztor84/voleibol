@@ -1,7 +1,7 @@
 @use '../abstracts' as ab;
 
 .header {
-    @include ab.query_header(large) {
+    @include ab.query(large) {
         &__nav {
             padding: 0;
 

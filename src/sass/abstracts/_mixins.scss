@@ -44,12 +44,6 @@
   }
 };
 
-// Query solo para el header -->
-@mixin query_header($breakpoint) {
-  & { @media screen and (width >= map.get(vb.$breakpoints, $breakpoint)) {
-    @content;
-  }}
-}
 // Query para todo -->
 @mixin query($breakpoint) {
   & { @media screen and (width >= map.get(vb.$breakpoints, $breakpoint)) {

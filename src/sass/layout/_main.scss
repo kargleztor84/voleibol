@@ -182,18 +182,38 @@
         }
 
         &__photos {
+            position: relative;
             width: 270px;
-            aspect-ratio: 4 / 5;
+            // aspect-ratio: 4 / 5; // <-- quitar despues de que las imagens esten puestas
             border-radius: 10px;
             background-image: linear-gradient(#fcc0281e, #1b1a1a6c);
             display: flex;
             flex-direction: column;
+            overflow: hidden;
+            
+            img {
+                object-fit: cover;
+                transform: scale(2.5);
+                transition: transform 0.4s ease;
+            }
+
+            @extend .hover-card;
         }
 
         &__info {
+            width: 90%;
             padding: 10px;
+            background-color: #3f3d3d;
+            border-right: 6px solid ab.$green-op;
+            position: absolute;
+            bottom: 10%;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            align-items: flex-end;
+
+            pointer-events: none;
+            clip-path: inset(0 100% 0 0);
+            transition: clip-path 0.4s ease;
         }
     }
 
@@ -238,7 +258,6 @@
                 display: none;
             }
         }
-
     }
 
     // SECCION VIDEO -->
@@ -251,19 +270,14 @@
         background-position-x: 200%;
         background-position-y: 90%;
         
-        // Contenedor de MAIN__VIDEO
+        // Contenedor espasidor de MAIN__VIDEO
         .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            // align-items: stretch;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
         }
 
         &__youtube {
-            flex: 1;
-            // max-width: 535px;
-            // margin-inline: auto;
             padding-bottom: 30px;
             text-align: center;
 
@@ -277,12 +291,6 @@
             text-align: center;
             font-size: 25px;
             margin-bottom: 20px;
-        }
-
-        &__next {
-            flex: 1;
-            // max-width: 500px;
-            // margin-inline: auto;
         }
 
         &__game {

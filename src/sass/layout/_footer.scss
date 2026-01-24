@@ -11,10 +11,11 @@
     color: ab.$text-color-tertiary;
     text-align: center;
     padding-bottom: 40px;
+    font-size: 14px;
 
     h4 {
         color: ab.$text-color;
-        font-size: 25px;        
+        font-size: 20px;        
     }
 
     a {
@@ -24,11 +25,10 @@
 
     &__nav {
         @extend .border-t;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 20px;
-        padding-block: 65px 40px;
+        padding-block: 40px;
 
         // Contenedor del logo ---
         &__text {
@@ -36,12 +36,17 @@
             .footer__nav__logo {
                 color: ab.$text-color;
                 text-transform: uppercase;
-                font-size: 25px;
+                font-size: 20px;
                 font-weight: 900;
                 line-height: 15px;
-                padding-bottom: 10px;
+                // padding-bottom: 7px;
     
                 @extend .hover-event;
+            }
+
+            p {
+                width: 200px;
+                margin: 0 auto;
             }
         }
 
@@ -52,6 +57,7 @@
         }
 
         &__redes {
+
             a {
                 width: 37px;
             }
@@ -60,7 +66,28 @@
 
     // Terminos legales ---
     &__legal {
-        padding-top: 40px;
+        padding-top: 20px;
         @extend .border-t;
+    }
+
+    @include ab.query(medium) {
+        text-align: initial;
+
+        &__nav {
+            grid-template-columns: repeat(4, 1fr);
+            place-items: baseline;
+
+            &__club {
+                justify-self: center;
+            }
+
+            &__equipos {
+                justify-self: center;
+            }
+
+            &__redes {
+                justify-self: end;
+            }
+        }
     }
 }

@@ -2,7 +2,7 @@
 @use '../base/helpers' as hp;
 
 .main {
-    @include ab.query_header(medium) {
+    @include ab.query(medium) {
         &__players {
 
             &__text {
