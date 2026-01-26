@@ -5,7 +5,7 @@
     // HERO SECTION -->
     &__hero {
         font-size: ab.$size-text;
-        background-image: linear-gradient(to bottom, #00000091, #000000), url(../../../img/hero.jpg);
+        background-image: linear-gradient(to bottom, #00000000, #000000), url(../../../img/hero.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center top;
@@ -121,7 +121,7 @@
     &__datos {
         background-color: ab.$black-op;
         border-block: 1px solid ab.$text-color-secundary;
-        margin-bottom: ab.$mb-sections;
+        // margin-bottom: ab.$mb-sections;
 
         .container {
             display: flex;
@@ -158,7 +158,23 @@
 
     // SECCION DE JUGADORES -->
     &__players {
-        margin-bottom: ab.$mb-sections;
+        position: relative;
+        padding-block: ab.$mb-sections + 100;
+        background-image: radial-gradient(at center top, #494848a6 -40%, #020202 70%);
+
+        .container {
+            position: relative;
+        }
+
+        .container::before {
+            content: '';
+            width: 60%;
+            height: 80%;
+            position: absolute;
+            top: 0;
+            left: 20%;
+            background-image: url(../../../img/punto.png);
+        }
 
         .flex {
             display: flex;
@@ -169,10 +185,19 @@
         
         &__text {
             text-align: center;
+            text-transform: uppercase;
+
+            p {
+                font-size: 14px;
+                letter-spacing: 4px;
+                padding-bottom: 10px;
+            }
 
             h3 {
-                font-size: 30px;
+                font-size: ab.$size-title-v1;
                 font-weight: 700;
+                line-height: ab.$line-title;
+                letter-spacing: -2.6px;
                 margin-bottom: ab.$mb + 10;
             }
 

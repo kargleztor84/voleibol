@@ -4,17 +4,28 @@
 .main {
     @include ab.query(medium) {
         &__players {
+            
 
             &__text {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
                 margin-bottom: 40px;
 
                 h3 {
                     margin: 0;
                 }
             }
+        }
+
+        &__players::before {
+            content: 'eatrellas';
+            position: absolute;
+            top: -20px;
+            left: 9%;
+            font-size: 22rem;
+            font-family: ab.$title;
+            font-weight: 900;
+            letter-spacing: -18px;
+            text-transform: uppercase;
+            color: #000000;
         }
 
         &__galery {
