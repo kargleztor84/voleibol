@@ -9,7 +9,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center top;
-        height: clamp(667px, 586.29px + 25.22vw, 780px);
+        height: clamp(667px, 579.68px + 23.29vw, 915px);
         display: grid;
         align-content: center;
         padding-top: 60px;
@@ -118,61 +118,62 @@
     }
 
     // DATOS SECTION -->
-    &__datos {
-        background-color: ab.$black-op;
-        border-block: 1px solid ab.$text-color-secundary;
-        // margin-bottom: ab.$mb-sections;
+    // &__datos {
+    //     background-color: ab.$black-op;
+    //     border-block: 1px solid ab.$text-color-secundary;
+    //     // margin-bottom: ab.$mb-sections;
 
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    //     .container {
+    //         display: flex;
+    //         justify-content: center;
+    //         align-items: center;
+    //     }
 
-        article+article {
-            border-left: 1px solid ab.$text-color-secundary;
-        }
+    //     article+article {
+    //         border-left: 1px solid ab.$text-color-secundary;
+    //     }
 
-        article {
-            flex: 1;
-            text-align: center;
-            h3 {
-                font-size: 30px;
-                color: ab.$yellow;
-            }
-            p { 
-                padding-top: 10px; 
-                text-transform: uppercase;
-                font-size: 14px;
-            }
-        }
+    //     article {
+    //         flex: 1;
+    //         text-align: center;
+    //         h3 {
+    //             font-size: 30px;
+    //             color: ab.$yellow;
+    //         }
+    //         p { 
+    //             padding-top: 10px; 
+    //             text-transform: uppercase;
+    //             font-size: 14px;
+    //         }
+    //     }
 
-        &__partidos {
-            padding: 30px 10px 30px 0;
-        }
+    //     &__partidos {
+    //         padding: 30px 10px 30px 0;
+    //     }
 
-        &__posicion { 
-            padding: 30px 0 30px 10px;
-        }
-    }
+    //     &__posicion { 
+    //         padding: 30px 0 30px 10px;
+    //     }
+    // }
 
     // SECCION DE JUGADORES -->
     &__players {
         position: relative;
-        padding-block: ab.$mb-sections + 100;
+        padding-block: ab.$mb-sections + 60;
         background-image: radial-gradient(at center top, #494848a6 -40%, #020202 70%);
 
         .container {
             position: relative;
+            text-align: center;
         }
 
         .container::before {
             content: '';
-            width: 60%;
+            width: 70%;
             height: 80%;
             position: absolute;
             top: 0;
-            left: 20%;
+            left: 14.6%;
             background-image: url(../../../img/punto.png);
         }
 
@@ -181,15 +182,26 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        &__plantilla {
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 900;
+
+            @extend .hover-event;
         }
         
         &__text {
             text-align: center;
             text-transform: uppercase;
+            padding-bottom: 20px;
 
             p {
                 font-size: 14px;
                 letter-spacing: 4px;
+                color: ab.$yellow;
                 padding-bottom: 10px;
             }
 
@@ -200,16 +212,13 @@
                 letter-spacing: -2.6px;
                 margin-bottom: ab.$mb + 10;
             }
-
-            a {
-                display: none;
-            }
         }
 
         &__photos {
             position: relative;
             width: 270px;
             box-shadow: inset 0px 0px 18px 0px #3f3d3d;
+            border: .5px solid #181818;
             border-radius: 8px;
             background-image: linear-gradient(#fcc0281e, #1b1a1a6c);
             display: flex;
