@@ -2,6 +2,7 @@
 @use '../base/helpers' as hp;
 
 .main {
+    // background-image: radial-gradient(circle, #494848a6 -80%, #020202 70%);
     // HERO SECTION -->
     &__hero {
         font-size: ab.$size-text;
@@ -117,6 +118,120 @@
         }
     }
 
+    // SECTION NEXT GAME -->
+    &__next {
+        
+        position: relative;
+        background-image: radial-gradient(at center bottom, #494848a6 -60%, #020202 70%);
+        // color: transparent;
+        
+        &__game {
+            text-align: center;
+            // font-family: ab.$title;
+
+            figure {
+                width: 100px;
+            }
+
+            h4 {
+                width: 210px;
+                // font-family: ab.$title;
+                font-size: 36px;
+                font-weight: 600;
+                line-height: 34px;
+                padding: 40px 0;
+                margin: 0 auto;
+            }
+
+            p {
+                // font-family: ab.$title;
+                z-index: 10;
+                font-size: 60px;
+                font-weight: 600;
+            }
+        }
+    }
+
+    &__next::before {
+        content: '';
+        width: 20%;
+        height: 80%;
+        position: absolute;
+        top: 10%;
+        left: 0;
+        background-image: url(../../../img/punto.png);
+    }
+
+    &__next::after {
+        content: '';
+        width: 20%;
+        height: 80%;
+        position: absolute;
+        top: 10%;
+        right: 0;
+        background-image: url(../../../img/punto.png);
+    }
+
+    // SECCION GALERIA -->
+    &__galery {
+        position: relative;
+        background-color: #827659;
+        // background-image: radial-gradient(circle, #494848a6 -110%, #020202 90%);
+        margin: 0 auto;
+        
+        &__img {
+            max-width: 570px;
+            margin: 0 auto;
+            padding-block: 120px;
+            z-index: 2;
+            
+            img {
+                border-radius: 7px;
+                object-fit: cover;
+                object-position: center 20%;
+                aspect-ratio: 5 / 3.2;
+            }
+        }
+        
+        &__aboutus {
+            color: #000000;
+            margin: 0 auto;
+            max-width: 570px;
+            padding-bottom: 120px;
+            z-index: 2;
+            font-weight: 600;
+        }
+        
+        &__text1 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin: 10px 0;
+        }
+
+        &__h4 {
+            color: ab.$yellow;
+            font-size: 54px;
+            font-family: ab.$title;
+            line-height: 45px;
+            margin-bottom: 24px;
+        }
+
+        &__text2 {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__galery::before {
+        content: '';
+        width: 40%;
+        height: 80%;
+        position: absolute;
+        top: 10%;
+        right: 20%;
+        background-image: url(../../../img/punto.png);
+    }
+
     // SECCION DE JUGADORES -->
     &__players {
         position: relative;
@@ -217,63 +332,6 @@
             clip-path: inset(0 100% 0 0);
             transition: clip-path 0.4s ease;
         }
-    }
-
-    // SECCION GALERIA -->
-    &__galery {
-        position: relative;
-        background-color: #141313;
-        margin: 0 auto;
-        
-        &__img {
-            max-width: 570px;
-            margin: 0 auto;
-            padding-block: 120px;
-            z-index: 2;
-            
-            img {
-                border-radius: 7px;
-                object-fit: cover;
-                object-position: center 20%;
-                aspect-ratio: 5 / 3.2;
-            }
-        }
-        
-        &__aboutus {
-            margin: 0 auto;
-            max-width: 570px;
-            padding-bottom: 120px;
-            z-index: 2;
-        }
-        
-        &__text1 {
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            margin: 10px 0;
-        }
-
-        &__h4 {
-            color: ab.$yellow;
-            font-size: 54px;
-            font-family: ab.$title;
-            line-height: 45px;
-            margin-bottom: 24px;
-        }
-
-        &__text2 {
-            margin-bottom: 10px;
-        }
-    }
-
-    &__galery::before {
-        content: '';
-        width: 50%;
-        height: 80%;
-        position: absolute;
-        top: 10%;
-        right: 10%;
-        background-image: url(../../../img/punto.png);
     }
 
     // SECCION VIDEO -->

@@ -3,6 +3,25 @@
 
 .main {
     @include ab.query(medium) {
+
+        &__next {
+            &__game {
+                height: 25rem;
+            }
+
+            &__game::after {
+                content: 'vs';
+                height: max-content;
+                position: absolute;
+                // z-index: -1;
+                inset: 0;
+                margin: auto;
+                font-size: 350px;
+                font-weight: 700;
+                color: #82765995;
+            }
+        }
+
         &__players {
             &__text {
                 margin-bottom: 40px;
@@ -40,8 +59,17 @@
         }
     }
 
-    @include ab.query(x-l) {
+    @include ab.query(large) {
+        &__next {
+            &__game {
+                position: relative;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
 
+    @include ab.query(x-l) {
         &__galery {
             &__aboutus {
                 padding: 0 20px 0 66px;
