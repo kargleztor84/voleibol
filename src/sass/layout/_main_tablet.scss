@@ -30,26 +30,21 @@
         }
 
         &__galery {
-            text-align: start;
-
-            &__aboutus {
-                max-width: inherit;
+            .container {
+                text-align: start;
                 display: grid;
-                grid-template-columns: 1fr 2fr;
+                align-items: center;
+                gap: 20px;
+                grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            }
+        }
+    }
 
-                figure {
-                    background-image: linear-gradient(to right,#0000006c, #000000);
-                    border-radius: 16px 0 0 16px;
+    @include ab.query(x-l) {
 
-                    img {
-                        object-fit: cover;
-                        transform: rotateY(180deg);
-                    }
-                }
-
-                p {
-                    background-image: linear-gradient(to right, #fbc02d, #ffffff);
-                }
+        &__galery {
+            &__aboutus {
+                padding: 0 20px 0 66px;
             }
         }
     }
