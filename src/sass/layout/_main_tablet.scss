@@ -7,16 +7,19 @@
         &__next {
             &__game {
                 height: 25rem;
+                flex-direction: row;
+                align-items: center;
             }
 
             &__game::after {
                 content: 'vs';
+                width: 260px;
                 height: max-content;
                 position: absolute;
-                // z-index: -1;
-                inset: 0;
+                left: 0;
+                right: 0;
                 margin: auto;
-                font-size: 350px;
+                font-size: 230px;
                 font-weight: 700;
                 color: #82765995;
             }

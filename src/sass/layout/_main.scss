@@ -122,30 +122,51 @@
     &__next {
         
         position: relative;
-        background-image: radial-gradient(at center bottom, #494848a6 -60%, #020202 70%);
-        // color: transparent;
+        background-image: radial-gradient(at center bottom, #827659 -60%, #020202 50%);
+
+        // .pista {
+        //     width: 100%;
+        //     overflow: hidden;
+        //     white-space: nowrap;
+
+        //     span {
+        //         font-size: 50px;
+        //         font-weight: 600;
+        //         color: ab.$azul-claro-mate;
+        //         display: inline-block;
+        //         padding-left: 100%;
+        //         animation: moveX 20s linear infinite;
+        //         will-change: transform;
+        //     }
+        // }
+
+        // @keyframes moveX {
+        //     from {
+        //         transform: translateX(0);
+        //     }
+        //     to {
+        //         transform: translateX(-100%);
+        //     }
+        // }
+
         
         &__game {
             text-align: center;
-            // font-family: ab.$title;
-
-            figure {
-                width: 100px;
-            }
+            display: flex;
+            flex-direction: column;
 
             h4 {
                 width: 210px;
-                // font-family: ab.$title;
-                font-size: 36px;
+                font-size: 30px;
                 font-weight: 600;
                 line-height: 34px;
                 padding: 40px 0;
                 margin: 0 auto;
+                
             }
 
             p {
-                // font-family: ab.$title;
-                z-index: 10;
+                z-index: 5;
                 font-size: 60px;
                 font-weight: 600;
             }
@@ -194,12 +215,10 @@
         }
         
         &__aboutus {
-            color: #000000;
             margin: 0 auto;
             max-width: 570px;
             padding-bottom: 120px;
             z-index: 2;
-            font-weight: 600;
         }
         
         &__text1 {
@@ -265,6 +284,7 @@
             text-transform: uppercase;
             font-size: 14px;
             font-weight: 900;
+            color: #827659;
 
             @extend .hover-event;
         }
@@ -284,6 +304,7 @@
             }
 
             h3 {
+                color: #827659;
                 font-size: ab.$size-title-v1;
                 font-weight: 700;
                 line-height: ab.$line-title;
@@ -337,69 +358,11 @@
     // SECCION VIDEO -->
     &__video {
         padding-block: ab.$mb-sections;
-        background-color: ab.$black-op;
-        background-image: url(../../../img/ball-volleyball.svg);
-        background-repeat: no-repeat;
-        background-size: 80%;
-        background-position-x: 200%;
-        background-position-y: 90%;
-        
-        // Contenedor espasidor de MAIN__VIDEO
-        .container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1rem;
-        }
-
-        &__youtube {
-            padding-bottom: 30px;
-            text-align: center;
-
-            h4 {
-                font-size: 25px;
-                margin-bottom: 20px;
-            }
-        }
-
-        &__h4 {
-            text-align: center;
-            font-size: 25px;
-            margin-bottom: 20px;
-        }
-
-        &__game {
-            font-size: 14px;
-            background-color: #3136408a;
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            place-items: center;
-            border-radius: 10px;
-
-            div {
-                padding: 20px;
-            }
-
-            div+div {
-                border-left: .5px solid ab.$text-color-secundary;
-            }
-        }
-
-        &__fecha {
-            text-align: center;
-            flex: 1;
-        }
-
-        &__rival > p {
-            display: flex;
-            justify-content: space-between;
-
-            span {
-                color: ab.$green;
-                border: 1px solid ;
-                border-radius: 6px;
-                display: inline-flex;
-                padding: 0 10px ;
-                background-color: #22c55e3b;
+        background-image: radial-gradient(at center bottom, #827659 -40%, #010101 70%);
+        figure {
+            width: 20%;
+            img {
+                opacity: .2;
             }
         }
     }
