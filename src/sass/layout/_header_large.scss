@@ -28,9 +28,19 @@
                 }
             }
 
-            &__unete {
-                @include ab.btn();
-                @include ab.btn-after();
+            &__follow {
+                display: flex;
+                align-items: center;
+                // gap: 10px;
+
+                a {
+                    color: #8a8787;
+                    width: 35px;
+                }
+
+                a:hover {
+                    color: ab.$amarillo;
+                }
             }
         }
     }
