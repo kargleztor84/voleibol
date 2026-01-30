@@ -199,25 +199,18 @@
         background-color: #827659;
         // background-image: radial-gradient(circle, #494848a6 -110%, #020202 90%);
         margin: 0 auto;
+        padding-block: 120px;
         
-        &__img {
-            max-width: 570px;
-            margin: 0 auto;
-            padding-block: 120px;
-            z-index: 2;
-            
-            img {
-                border-radius: 7px;
-                object-fit: cover;
-                object-position: center 20%;
-                aspect-ratio: 5 / 3.2;
-            }
+        img {
+            border-radius: 10px;
+            object-fit: cover;
+            object-position: center 20%;
+            box-shadow: 0px 0px 38px black;
         }
         
-        &__aboutus {
+        &__grid-2, &__grid-4 {
             margin: 0 auto;
             max-width: 570px;
-            padding-bottom: 120px;
             z-index: 2;
         }
         

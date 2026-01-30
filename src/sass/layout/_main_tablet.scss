@@ -52,17 +52,25 @@
         }
 
         &__galery {
-            .container {
+            &__grid {
                 text-align: start;
                 display: grid;
                 align-items: center;
                 gap: 20px;
-                grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+                grid-template-columns: repeat(3, 1fr);
+
+                &-2 {
+                    grid-area: 1 / 2 / span 1 / span 2;
+                }
+
+                &-4 {
+                    grid-area: 2 / 1 / span 2 /span 2;
+                }
             }
         }
     }
 
-    @include ab.query(large) {
+    @include ab.query('large') {
         &__next {
             &__game {
                 position: relative;
