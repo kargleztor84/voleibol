@@ -58,13 +58,24 @@
                 align-items: center;
                 gap: 20px;
                 grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+
+                &-1 {
+                    grid-area: 1 / 1 / span 1 / span 1;
+                    align-self: stretch;
+                }
 
                 &-2 {
-                    grid-area: 1 / 2 / span 1 / span 2;
+                    grid-area: 2 / 1 / span 2 / span 2;
+                }
+
+                &-3 {
+                    grid-area: 2 / 3 / span 2 / span 1;
+                    align-self: stretch;
                 }
 
                 &-4 {
-                    grid-area: 2 / 1 / span 2 /span 2;
+                    grid-area: 1 / 2 / span 1 / span 2;
                 }
             }
         }

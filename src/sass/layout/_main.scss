@@ -199,19 +199,20 @@
         background-color: #827659;
         // background-image: radial-gradient(circle, #494848a6 -110%, #020202 90%);
         margin: 0 auto;
-        padding-block: 120px;
+        padding-block: 120px 80px;
         
         img {
-            border-radius: 10px;
+            border-radius: 8px;
             object-fit: cover;
             object-position: center 20%;
-            box-shadow: 0px 0px 38px black;
+            margin-bottom: 20px;
         }
         
         &__grid-2, &__grid-4 {
             margin: 0 auto;
             max-width: 570px;
             z-index: 2;
+            padding-bottom: 40px;
         }
         
         &__text1 {
@@ -265,13 +266,37 @@
             background-image: url(../../../img/punto.png);
         }
 
-        .flex {
+        // .carousel {
+        //     display: flex;
+        //     overflow-x: auto;
+        // }
+
+        // .carousel::-webkit-scrollbar {
+        //     display: none;
+        // }
+
+        .carousel__flex {
             display: flex;
             flex-wrap: wrap;
+            // align-items: center;
             justify-content: center;
             gap: 20px;
             margin-bottom: 30px;
+
+            // overflow-x: auto;
+            // overscroll-behavior-x: contain;
+            // scroll-snap-type: x mandatory;
+            // anchor-name: --carousel;
+
+
+            // .main__players__photos {
+            //     scroll-snap-align: center;
+            // }
         }
+
+        // .carousel__flex::-webkit-scrollbar {
+        //     display: none;
+        // }
 
         &__plantilla {
             text-transform: uppercase;
@@ -313,6 +338,7 @@
         &__photos {
             position: relative;
             width: 270px;
+            flex: 0 0 270px;
             // box-shadow: inset 0px 0px 18px 0px #3f3d3d;
             // border: .5px solid #181818;
             border-radius: 8px;
@@ -333,33 +359,29 @@
         &__info {
             width: 90%;
             padding: 10px;
-            background-image: linear-gradient(to right, #3f3d3d74, #333232 80%);
-            // background-color: #333232;
+            background-color: #333232;
             border-right: 6px solid ab.$green;
             position: absolute;
-            bottom: 10%;
+            bottom: 0;
             display: flex;
             flex-direction: column;
             align-items: flex-end;
             backdrop-filter: blur(8px);
-
-            pointer-events: none;
-            clip-path: inset(0 100% 0 0);
             transition: clip-path 0.4s ease;
         }
     }
 
     // SECCION VIDEO -->
     &__video {
-        padding-block: ab.$mb-sections;
-        background-image: radial-gradient(at center bottom, #827659 -40%, #010101 70%);
-        figure {
+        position: relative;
+        color: #000000;
+        background-color: ab.$amarillo;
+        img {
             width: 20%;
-            img {
-                opacity: .2;
-            }
+            filter: drop-shadow(2px 2px 15px #827659);
         }
     }
+
 
     // SECCION MAPS -->
     &__maps {
