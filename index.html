@@ -42,13 +42,13 @@
 							<a href="#" class="header__nav __link">inicio</a>
 						</li>
 						<li class="header__nav__li">
-							<a href="#" class="header__nav __link">equipo</a>
+							<a href="#players" class="header__nav __link">equipo</a>
 						</li>
 						<li class="header__nav__li">
 							<a href="#" class="header__nav __link">fichajes</a>
 						</li>
 						<li class="header__nav__li">
-							<a href="#" class="header__nav __link">calendario</a>
+							<a href="#partidos" class="header__nav __link">calendario</a>
 						</li>
 						<li class="header__nav__li">
 							<a href="#" class="header__nav __link">contacto</a>
@@ -93,10 +93,10 @@
 						La pasión del voleibol en Menorca. Únete a nosotros en cada salto, cada bloqueo; en cada partido.
 					</p>
 					<div class="main__hero__container">
-						<a href="" class="main__hero__btn uno">
+						<a href="#partidos" class="main__hero__btn uno">
 							Ver Calendario
 						</a>
-						<a href="" class="main__hero__btn dos">
+						<a href="#players" class="main__hero__btn dos">
 							Conoce al equipo
 						</a>
 					</div>
@@ -104,19 +104,23 @@
 			</section>
 			<!-- Seccion main next game -->
 			<section class="main__next">
-				<!-- <div class="pista">
-					<span>PROXIMO PARTIDO (SCANNER CV SON FERRER vs CV ES CASTELL)</span>
-				</div> -->
 				<div class="container">
+					<!-- <p>PROXIMO PARTIDO</p> -->
 					<article class="main__next__game">
-						<h4>SCANNER CV SON FERRER</h4>
-						<p>16:00</p>
+						<figure class="main__next__img1">
+							<img src="./img/equipos/mayurqa_volei_palma.png" alt="logo del equipo">
+						</figure>
+						<h4>MAYURQA VOLEY PALMA</h4>
+						<p>11:00</p>
 						<h4>CLUB VOLEI ES CASTELL</h4>
+						<figure class="main__next__img2">
+							<img src="./img/equipos/cv_es_castell.png" alt="logo del equipo">
+						</figure>
 					</article>
 				</div>
 			</section>
 			<!-- Seccion galeria -->
-			<section class="main__galery">
+			<section class="main__galery" id="galery">
 				<div class="container">
 					<section class="main__galery__grid">
 
@@ -153,7 +157,7 @@
 				</div>
 			</section>
 			<!-- Seccion juagadores -->
-			<section class="main__players">
+			<section class="main__players" id="players">
 				<div class="container">
 					<article class="main__players__text">
 						<p>Conoce a los jugadores</p>
@@ -216,8 +220,104 @@
 					</a>
 				</div>
 			</section>
+			<!-- Seccion calendario -->
+			<section class="main__calendario" id="partidos">
+				<div class="container">
+					<table class="table__container">
+						<caption>CALENDARIO</caption>
+						<thead>
+							<tr>
+								<th>LOCAL</th>
+								<th>Rdo</th>
+								<th>FECHA HORA</th>
+								<th>Rdo</th>
+								<th>VISITANTE</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="team local" data-team="castell">CLUB VOLEI ES CASTELL</td>
+								<td class="score">3</td>
+								<td class="data">25/01/2026 12:30</td>
+								<td class="score">0</td>
+								<td class="team visitante" data-team="ciutadella">CV CIUTADELLA BIOSPORT</td>
+							</tr>
+							<tr>
+								<td class="team local" data-team="ferrer">SCANNER CV SON FERRER</td>
+								<td class="score">3</td>
+								<td class="data">01/02/2026 16:00</td>
+								<td class="score">0</td>
+								<td class="team visitante" data-team="castell">CLUB VOLEI ES CASTELL</td>
+							</tr>
+							<tr>
+								<td class="team local" data-team="mayurqa">MAYURQA VOLEY PALMA</td>
+								<td class="score">-</td>
+								<td class="data">08/02/2026 11:00</td>
+								<td class="score">-</td>
+								<td class="team visitante" data-team="castell">CLUB VOLEI ES CASTELL</td>
+							</tr>
+							<tr>
+								<td class="team local" data-team="castell">CLUB VOLEI ES CASTELL</td>
+								<td class="score">-</td>
+								<td class="data">15/02/2026 12:30</td>
+								<td class="score">-</td>
+								<td class="team visitante" data-team="anaya">ANAYA MAYURQA VOLEY PALMA</td>
+							</tr>
+							<tr>
+								<td class="team local" data-team="soller">CVS BAR SON ANGELATS SOLLER</td>
+								<td class="score">-</td>
+								<td class="data">22/02/2026 11:00</td>
+								<td class="score">-</td>
+								<td class="team visitante" data-team="castell">CLUB VOLEI ES CASTELL</td>
+							</tr>
+							<tr>
+								<td class="team local" data-team="castell">CLUB VOLEI ES CASTELL</td>
+								<td class="score">-</td>
+								<td class="data">08/03/2026 12:30</td>
+								<td class="score">-</td>
+								<td class="team visitante" data-team="bunyola">C.V. BUNYOLA</td>
+							</tr>
+							<tr>
+								<td class="team local" data-team="muro">CASA NOVA Volei Muro</td>
+								<td class="score">-</td>
+								<td class="data">14/03/2026</td>
+								<td class="score">-</td>
+								<td class="team visitante" data-team="castell">CLUB VOLEI ES CASTELL</td>
+							</tr>
+							<tr>
+								<td class="team local" data-team="castell">CLUB VOLEI ES CASTELL</td>
+								<td class="score">-</td>
+								<td class="data">22/03/2026 12:30</td>
+								<td class="score">-</td>
+								<td class="team visitante" data-team="rafal">RAFAL VELL</td>
+							</tr>
+							<tr>
+								<td class="team local" data-team="palma">PALMA ESPORTS</td>
+								<td class="score">-</td>
+								<td class="data">28/03/2026 12:00</td>
+								<td class="score">-</td>
+								<td class="team visitante" data-team="castell">CLUB VOLEI ES CASTELL</td>
+							</tr>
+							<tr>
+								<td class="team local" data-team="castell">CLUB VOLEI ES CASTELL</td>
+								<td class="score">-</td>
+								<td class="data">12/04/2026 12:30</td>
+								<td class="score">-</td>
+								<td class="team visitante" data-team="portol">VIAJES LLABRES CV. PÒRTOL</td>
+							</tr>
+							<tr>
+								<td class="team local" data-team="manacor">ES CRUCE CV MANACOR</td>
+								<td class="score">-</td>
+								<td class="data">18/04/2026</td>
+								<td class="score">-</td>
+								<td class="team visitante" data-team="castell">CLUB VOLEI ES CASTELL</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
 			<!-- Seccion video -->
-			<section class="main__video">
+			<section class="main__video" id="videos">
 				<article class="main__video__title">
 					<p></p>
 					<h4>MOMENTOS</h4>
@@ -225,11 +325,11 @@
 				<img src="./img/galery/logo__ataque-1.png" alt="">
 			</section>
 			<!-- Seccion Google Maps -->
-			<section class="main__maps">
+			<section class="main__maps" id="ubicacion">
 				<div class="container">
 					<article class="main__maps__adress">
 						<p>
-							Nuestro local de entrenamiento esta ubicado en: <adress>
+							Nuestro de entrenamiento esta ubicado en: <adress>
 							Camino I, 3, 07720 Es Castell, Balearic Islands
 							</adress>
 						</p>

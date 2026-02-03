@@ -1,12 +1,12 @@
 @use '../abstracts' as ab;
 @use '../base/helpers' as hp;
+@use 'sass:map';
 
 .main {
-    // background-image: radial-gradient(circle, #494848a6 -80%, #020202 70%);
     // HERO SECTION -->
     &__hero {
         font-size: ab.$size-text;
-        background-image: linear-gradient(to bottom, #00000000, #000000), url(../../../img/hero.jpg);
+        background-image: linear-gradient(to bottom, #ffffff00 10%, #000), url(../../../img/hero.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center top;
@@ -80,7 +80,8 @@
 
         // Texto debajo del encabezado --
         &__text {
-            max-width: 300px;
+            max-width: 280px;
+            font-weight: 600;
             @include ab.inline();
             margin-bottom: ab.m-all('suma', 10);
         }
@@ -120,55 +121,35 @@
 
     // SECTION NEXT GAME -->
     &__next {
-        
         position: relative;
-        background-image: radial-gradient(at center bottom, #827659 -60%, #020202 50%);
-
-        // .pista {
-        //     width: 100%;
-        //     overflow: hidden;
-        //     white-space: nowrap;
-
-        //     span {
-        //         font-size: 50px;
-        //         font-weight: 600;
-        //         color: ab.$azul-claro-mate;
-        //         display: inline-block;
-        //         padding-left: 100%;
-        //         animation: moveX 20s linear infinite;
-        //         will-change: transform;
-        //     }
-        // }
-
-        // @keyframes moveX {
-        //     from {
-        //         transform: translateX(0);
-        //     }
-        //     to {
-        //         transform: translateX(-100%);
-        //     }
-        // }
-
+        font-family: ab.$title;
+        background-image: radial-gradient(at center, #494848a6 , #000000 70%);
         
         &__game {
             text-align: center;
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            place-items: center;
+            padding: 70px 0;
 
             h4 {
-                width: 210px;
-                font-size: 30px;
-                font-weight: 600;
-                line-height: 34px;
-                padding: 40px 0;
+                width: 150px;
+                font-size: 25px;
+                font-weight: 900;
+                line-height: 24px;
+                padding: 20px 0;
                 margin: 0 auto;
-                
+                z-index: 5;
             }
 
             p {
                 z-index: 5;
-                font-size: 60px;
-                font-weight: 600;
+                font-size: 80px;
+                font-weight: 900;
+            }
+
+            figure {
+                z-index: 3;
+                width: 200px;
             }
         }
     }
@@ -196,8 +177,8 @@
     // SECCION GALERIA -->
     &__galery {
         position: relative;
-        background-color: #827659;
-        // background-image: radial-gradient(circle, #494848a6 -110%, #020202 90%);
+        // background-color: #827659;
+        background-image: radial-gradient(circle, #494848a6 -110%, #020202 90%);
         margin: 0 auto;
         padding-block: 120px 80px;
         
@@ -371,6 +352,108 @@
         }
     }
 
+    // SECCION CALENDARIO -->
+    &__calendario {
+        padding-bottom: 50px;
+        table, th, td {
+            border-collapse: collapse;
+            overflow: hidden;
+        } 
+
+        td, th {
+            position: relative;
+            z-index: 8;
+            vertical-align: middle;
+            padding-block: 28px;
+        }
+
+        th {
+            color: #fbc02d;
+            // font-size: 20px;
+        }
+
+        tr {
+            border-bottom: 1px solid ab.$text-color-secundary;
+            transition: all .7s ease;
+
+            @extend .tr-hover;
+        }
+
+        table {
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            background-image: linear-gradient(to left, #000000, #6f6b6b9e, #000);
+            padding: 10px;
+
+            caption {
+                font-size: 40px;
+                font-weight: 500;
+                color: #827659;
+            }
+
+            .local {
+                @extend .calendario-after;
+            }
+            
+            .visitante {
+                @extend .calendario-before;
+            }
+
+            [data-team="castell"]::before {
+                background-image: map.get(ab.$logos-url, castell);
+            }
+
+            [data-team="castell"]::after {
+                background-image: map.get(ab.$logos-url, castell);
+            }
+
+            [data-team="ferrer"]::after {
+                background-image: map.get(ab.$logos-url, ferrer);
+            }
+
+            [data-team="ciutadella"]::before {
+                background-image: map.get(ab.$logos-url, ciutadella);
+            }
+
+            [data-team="mayurqa"]::after {
+                background-image: map.get(ab.$logos-url, mayurqa);
+            }
+
+            [data-team="anaya"]::before {
+                background-image: map.get(ab.$logos-url, anaya);
+            }
+
+            [data-team="soller"]::after {
+                background-image: map.get(ab.$logos-url, soller);
+            }
+
+            [data-team="bunyola"]::before {
+                background-image: map.get(ab.$logos-url, bunyola);
+            }
+
+            [data-team="rafal"]::before {
+                background-image: map.get(ab.$logos-url, rafal);
+            }
+
+            [data-team="portol"]::before {
+                background-image: map.get(ab.$logos-url, portol);
+            }
+
+            [data-team="manacor"]::after {
+                background-image: map.get(ab.$logos-url, manacor);
+            }
+
+            [data-team="palma"]::after {
+                background-image: map.get(ab.$logos-url, palma);
+            }
+
+            [data-team="muro"]::after {
+                background-image: map.get(ab.$logos-url, muro);
+            }
+        }
+    }
+
     // SECCION VIDEO -->
     &__video {
         position: relative;
@@ -381,7 +464,6 @@
             filter: drop-shadow(2px 2px 15px #827659);
         }
     }
-
 
     // SECCION MAPS -->
     &__maps {

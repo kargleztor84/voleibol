@@ -71,6 +71,21 @@ $breakpoints: (
 	'x-l': 1440px,
 );
 
+$logos-url: (
+	'castell': url('../../../img/equipos/cv_es_castell.png'),
+	'ciutadella': url('../../../img/equipos/cv_ciutadella.png'),
+	'ferrer': url('../../../img/equipos/son_ferrer.png'),
+	'manacor': url('../../../img/equipos/cv_manacor.png'),
+	'bunyola': url('../../../img/equipos/cv_bunyola.png'),
+	'portol': url('../../../img/equipos/cv_portol.png'),
+	'soller': url('../../../img/equipos/cv_soller.png'),
+	'mayurqa': url('../../../img/equipos/mayurqa_volei_palma.png'),
+	'anaya': url('../../../img/equipos/anaya_mayurqa_volei_plama.png'),
+	'rafal': url('../../../img/equipos/rafal_vell.png'),
+	'muro': url('../../../img/equipos/volei_muro.png'),
+	'palma': url('../../../img/equipos/palma_sports.png'),
+);
+
 /// Relative or absolute URL where all assets are served from
 /// @type String
 /// @example scss - When using a CDN

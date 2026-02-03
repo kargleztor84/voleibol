@@ -1,27 +1,28 @@
 @use '../abstracts' as ab;
 @use '../base/helpers' as hp;
+@use 'sass:map';
 
 .main {
     @include ab.query(medium) {
 
         &__next {
             &__game {
-                height: 25rem;
-                flex-direction: row;
-                align-items: center;
+                position: relative;
             }
 
-            &__game::after {
-                content: 'vs';
-                width: 260px;
-                height: max-content;
+            figure {
+                width: 250px;
+            }
+
+            &__game::before{
+                content: 'LIVE';
+                width: auto;
+                height: auto;
                 position: absolute;
-                left: 0;
-                right: 0;
-                margin: auto;
-                font-size: 230px;
-                font-weight: 700;
-                color: #82765995;
+                font-size: 250px;
+                font-weight: 900;
+                letter-spacing: -12px;
+                color: #00000071;
             }
         }
 
@@ -65,7 +66,7 @@
                     align-self: stretch;
                 }
 
-                &-2 {
+                &-4 {
                     grid-area: 2 / 1 / span 2 / span 2;
                 }
 
@@ -74,7 +75,7 @@
                     align-self: stretch;
                 }
 
-                &-4 {
+                &-2 {
                     grid-area: 1 / 2 / span 1 / span 2;
                 }
             }
@@ -85,8 +86,7 @@
         &__next {
             &__game {
                 position: relative;
-                display: flex;
-                align-items: center;
+                grid-template-columns: repeat(5, 1fr);
             }
         }
     }
