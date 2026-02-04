@@ -34,6 +34,10 @@
                     margin: 0;
                 }
             }
+
+            &__coach {
+                flex-direction: row;
+            }
         }
 
         &__players::before {

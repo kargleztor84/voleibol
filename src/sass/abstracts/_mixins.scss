@@ -77,3 +77,69 @@
     @content;
   }
 }
+
+// CAROUSEL
+@mixin carousel ($anchor-name) {
+  & {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    anchor-name: $anchor-name;
+
+    columns: 1;
+    block-size: auto;
+    text-align: start;
+
+    &::column {
+      scroll-snap-align: center;
+    }
+
+    &::scroll-button(*) {
+      position: fixed;
+      z-index: 5;
+      position-anchor: $anchor-name;
+      position-visibility: always;
+      font-family: vb.$text-font-stack;
+    }
+
+    &::scroll-button(right) {
+      position-area: inline-end center;
+      content: '⟩';
+    }
+
+    &::scroll-button(left) {
+      position-area: inline-start center;
+      content: '⟨';
+    }
+
+    &::scroll-button(left), &::scroll-button(right) {
+      padding: 10px 14px;
+      border: none;
+      border-radius: 50%;
+      background-color: transparent;
+      color: #fff;
+      font-weight: 200;
+      font-size: 25px;
+    }
+
+    &::scroll-button(left):disabled, &::scroll-button(right):disabled {
+      opacity: .4;
+      cursor: auto;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @include query(x-l) {
+      & {
+          gap: 20px;
+      }
+    }
+  }
+}
