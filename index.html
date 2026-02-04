@@ -27,12 +27,12 @@
 						cv es castell
 					</a>
 
-					<!-- Input toggle event -->
+					<!-- Input triggle event -->
 					<section class="header__nav__toggle">
-						<input type="checkbox" id="toggle" name="estado"
+						<input type="checkbox" id="triggle" name="estado"
 						class="header__nav__input">
 
-						<label for="toggle"  class="header__nav__icon">
+						<label for="triggle"  class="header__nav__icon">
 						</label>
 					</section>
 
@@ -144,7 +144,7 @@
 						<article class="main__galery__grid-4">
 							<p class="main__galery__text1">más que músculos y técnica</p>
 	
-							<h4 class="main__galery__h4">UNIDOS CON UN PROPOSITO</h4>
+							<h4 class="main__galery__h4">UNIDOS CON UN PROPÓSITO</h4>
 	
 							<p class="main__galery__text2">
 								Cada jugador sabe dónde estar y cuándo saltar, porque aquí no se juega solo con el cuerpo, se juega con la cabeza y el corazón.
@@ -318,11 +318,21 @@
 			</section>
 			<!-- Seccion video -->
 			<section class="main__video" id="videos">
-				<article class="main__video__title">
-					<p></p>
-					<h4>MOMENTOS</h4>
-				</article>
-				<img src="./img/galery/logo__ataque-1.png" alt="">
+				<div class="container">
+					<input type="checkbox" id="chek">
+
+					<label for="chek" class="btn-mostrar">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-player-play"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" /></svg>
+					</label>
+
+					<article class="main__video__container">
+						<label for="chek" class="btn-cerrar"></label>
+
+						<video autoplay loop muted controls preload="auto">
+							<source src="./videos/video_volei.mp4" type="video/mp4">
+						</video>
+					</article>
+				</div>
 			</section>
 			<!-- Seccion Google Maps -->
 			<section class="main__maps" id="ubicacion">
