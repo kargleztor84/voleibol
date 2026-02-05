@@ -467,10 +467,9 @@
             width: max-content;
             color: ab.$amarillo;
             display: flex;
-            border: 1px solid ab.$amarillo;
+            border: 7px solid ab.$amarillo;
             border-radius: 50%;
-            padding: 10px;
-            margin: auto;
+            padding: 8px;
         }
 
         .btn-cerrar {
@@ -496,19 +495,32 @@
             justify-content: center;
             align-items: center;
             z-index: 100;
-
         }
         
         video {
-            transition: display .6s ease;
+            transition: all .6s ease;
             border-radius: 10px;
             width: ab.$width-video;
             box-shadow: 0 0 30px 0 #acacaa48;
         }
 
-        
         input:checked ~ .main__video__container {
             display: flex;
+        }
+
+        .momentos {
+            display: flex;
+            gap: 2px;
+            align-items: center;
+            text-shadow: 0px 0px 40px ab.$text-color;
+            
+            span {
+                font-size: 60px;
+                text-transform: uppercase;
+                font-family: ab.$title;
+                font-weight: 800;
+                // color: ab.$olivo-claro;
+            }
         }
     }
 

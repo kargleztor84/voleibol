@@ -382,16 +382,25 @@
 		<!-- Seccion video -->
 		<section class="main__video" id="videos">
 			<div class="container">
+				
 				<input type="checkbox" id="chek">
-
-				<label for="chek" class="btn-mostrar">
-					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-player-play"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" /></svg>
-				</label>
+				<div class="momentos">
+					<span>m</span>
+					<label for="chek" class="btn-mostrar">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-player-play"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" /></svg>
+					</label>
+					<span>m</span>
+					<span>e</span>
+					<span>n</span>
+					<span>t</span>
+					<span>o</span>
+					<span>s</span>
+				</div>
 
 				<article class="main__video__container">
 					<label for="chek" class="btn-cerrar"></label>
 
-					<video autoplay loop muted controls preload="auto">
+					<video autoplay loop muted controls id="video">
 						<source src="./videos/video_volei.mp4" type="video/mp4">
 					</video>
 				</article>
@@ -467,5 +476,16 @@
 		</div>
 	</footer>
 	<script type="module" src="./src/app.js"></script>
+	<script>
+		const checkbox = document.getElementById('chek');
+		const video = document.getElementById('video');
+
+		checkbox.addEventListener('change', () => {
+			if (!checkbox.checked) {
+			video.pause();
+			video.currentTime = 0; // opcional: vuelve al inicio
+			}
+		});
+	</script>
 </body>
 </html>
