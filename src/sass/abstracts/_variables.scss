@@ -52,8 +52,6 @@ $line-title: clamp(45px, 19.24px + 6.86vw, 72px);
 $size-subtitle: clamp(32px, 9px + 6.12vw, 56px);
 // Size text
 $size-text: clamp(16px, 14px + 0.524vw, 18px);
-// Ancho de contenedor
-$width-container: max-content;
 
 // widht con max()
 $max-size: max(335px, 50%);

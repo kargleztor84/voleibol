@@ -143,3 +143,24 @@
     }
   }
 }
+
+@mixin posiciones ($position) {
+  &::before {
+    content: $position;
+    width: max-content;
+    height: auto;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: clamp(140px, 71.43px + 8.93vw, 200px);
+    font-family: vb.$title;
+    font-weight: 900;
+    letter-spacing: -8px;
+    text-transform: uppercase;
+    background-image: linear-gradient(to bottom, transparent , #000 110%);
+    color: transparent;
+    background-clip: text;
+    @content;
+  }
+}

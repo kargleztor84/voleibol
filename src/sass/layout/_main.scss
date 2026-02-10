@@ -275,6 +275,11 @@
             }
         }
 
+        .carousel__container {
+            display: grid;
+            justify-content: center
+        }
+
         .carousel__flex1 {
             @include ab.carousel(--carousel1);
         }
@@ -283,25 +288,6 @@
             @include ab.carousel(--carousel2);
         }
         
-        &__coach {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 30px;
-            
-            img {
-                mask-image: linear-gradient(black 90%, transparent);
-                transition: all 0.5s ease;
-            }
-
-            article:hover {
-                img {
-                    transform: scale(1.1);
-                    filter: drop-shadow(0 0 10px );
-                }
-            }
-        }
-
         &__photos {
             position: relative;
             flex: 0 0 100%;
@@ -312,7 +298,6 @@
             scroll-snap-align: start;
             
             img {
-                background-color: transparent;
                 transition: all 0.4s ease;
                 mask-image: linear-gradient(black 60%, transparent)
             }
@@ -320,7 +305,7 @@
             @extend .hover-card;
 
             @include ab.query(medium) {
-                flex: 0 0 334px;
+                flex: 0 0 335px;
             }
             @include ab.query(large) {
                 flex: 0 0 298px;
@@ -345,6 +330,25 @@
 
             h4 {
                 font-size: 24px;
+            }
+        }
+
+        &__coach {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 30px;
+            
+            img {
+                mask-image: linear-gradient(black 90%, transparent);
+                transition: all 0.5s ease;
+            }
+
+            article:hover {
+                img {
+                    transform: scale(1.1);
+                    filter: drop-shadow(0 0 10px );
+                }
             }
         }
     }
@@ -453,7 +457,7 @@
 
     // SECCION VIDEO -->
     &__video {
-        background-image: radial-gradient(circle, #00000094 20%, #000000 ), url(../../../img/valon-voley.png);
+        background-image: radial-gradient(circle, #000000a1 20%, #000000 ), url(../../../img/valon-voley.png);
         background-repeat: no-repeat;
         background-size: 60%;
         background-position: center;
@@ -489,7 +493,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: #00000097;
+            background-color: #000000e7;
             cursor: pointer;
             display: none;
             justify-content: center;
@@ -501,7 +505,6 @@
             transition: all .6s ease;
             border-radius: 10px;
             width: ab.$width-video;
-            box-shadow: 0 0 30px 0 #acacaa48;
         }
 
         input:checked ~ .main__video__container {
@@ -512,14 +515,13 @@
             display: flex;
             gap: 2px;
             align-items: center;
-            text-shadow: 0px 0px 40px ab.$text-color;
+            text-shadow: 0px 0px 30px;
             
             span {
                 font-size: 60px;
                 text-transform: uppercase;
                 font-family: ab.$title;
                 font-weight: 800;
-                // color: ab.$olivo-claro;
             }
         }
     }

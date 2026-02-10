@@ -1,0 +1,151 @@
+@use '../abstracts' as ab;
+@use '../base/helpers' as hp;
+@use 'sass:map';
+
+.hero__equipo {
+    height: clamp(470px, 307.79px + 43.257vw, 640px);
+    background-image: linear-gradient(to bottom, #ffffff00 10%, #000), url(../../../img/foto_video.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 37%;
+    margin-top: 60px;
+    display: grid;
+    align-items: center;
+
+    p {
+        letter-spacing: 5px;
+        margin-bottom: 10px;
+        font-family: ab.$sub-title;
+        font-size: 40px;
+    }
+    
+    .hero__title {
+        text-transform: uppercase;
+        font-family: ab.$title;
+        font-size: ab.$size-title;
+        line-height: ab.$line-title;
+    }
+}
+
+.players {
+    padding-block: 60px;
+    
+    .container {
+        max-width:100%;
+    }
+    
+    .players__text {
+        text-align: center;
+        padding-block: 30px;
+        
+        p {
+            text-transform: uppercase;
+            letter-spacing: 9px;
+        }
+        
+        .players__subtitle {
+            text-transform: uppercase;
+            font-size: ab.$size-subtitle;
+            color: #701c83;
+        }
+    }
+    
+    .players__container {
+        display: grid;
+        grid-template-rows: repeat(5, 1fr);
+        
+        .players-p {
+            position: relative;
+            padding-block: 40px;
+            display: grid;
+            justify-content: center;
+            background-image: radial-gradient(at center top, #494848a6 , #000000 75%);
+
+            & > h4 {
+                color: ab.$olivo-claro;
+                text-transform: uppercase;
+                text-align: center;
+                font-size: 30px
+            }
+        }
+        
+        .colocadores {
+            @include ab.carousel(--colocadores);
+        }
+        
+        .puntas {
+            @include ab.carousel(--puntas);
+        }
+
+        .opuestos {
+            @include ab.carousel(--opuestos);
+        }
+
+        .centrales {
+            @include ab.carousel(--centrales);
+        }
+
+        .liberos {
+            @include ab.carousel(--liberos);
+        }
+
+        .colocadores, .puntas, .opuestos, .centrales, .liberos {
+            margin-bottom: 0;
+        }
+
+        .posiciones::before {
+            content: '';
+            width: 70%;
+            height: 60%;
+            position: absolute;
+            top: 12%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-image: url(../../../img/punto.png);
+        }
+
+        @include ab.query(medium) {
+            .colocadores, .opuestos, .liberos {
+                &::scroll-button(*) {
+                    all: unset;
+                }
+            }
+
+            [data-posi="colocadores"] {
+                @include ab.posiciones ('colocadores');
+            }
+            
+            [data-posi="puntas"] {
+                @include ab.posiciones ('puntas');
+            }
+            
+            [data-posi="opuestos"] {
+                @include ab.posiciones ('opuestos');
+            }
+            
+            [data-posi="centrales"] {
+                @include ab.posiciones ('centrales');
+            }
+            
+            [data-posi="liberos"] {
+                @include ab.posiciones ('liberos');
+            }
+        }
+
+        @include ab.query(large) {
+            .colocadores, .opuestos, .centrales, .liberos {
+                &::scroll-button(*) {
+                    all: unset;
+                }
+            }
+        }
+
+        @include ab.query(x-l) {
+            .colocadores, .puntas, .opuestos, .centrales, .liberos {
+                &::scroll-button(*) {
+                    all: unset;
+                }
+            }
+        }
+    }
+}
