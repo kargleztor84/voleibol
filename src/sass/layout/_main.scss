@@ -1,565 +1,579 @@
-@use '../abstracts' as ab;
-@use '../base/helpers' as hp;
-@use 'sass:map';
+@use "../abstracts" as ab;
+@use "../base/helpers" as hp;
+@use "sass:map";
 
 .main {
-    // HERO SECTION -->
-    &__hero {
-        font-size: ab.$size-text;
-        background-image: linear-gradient(to bottom, #ffffff00 10%, #000), url(../../../img/hero.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center top;
-        height: clamp(667px, 579.68px + 23.29vw, 915px);
-        display: grid;
-        align-content: center;
-        padding-top: 60px;
+  // HERO SECTION -->
+  &__hero {
+    font-size: ab.$size-text;
+    background-image:
+      linear-gradient(to bottom, #ffffff00 10%, #000),
+      url(../../../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    height: clamp(667px, 579.68px + 23.29vw, 915px);
+    display: grid;
+    align-content: center;
+    padding-top: 60px;
 
-        // Contenedor de eapaceado ---
-        .container {
-            display: grid;
-            text-align: center;
-        }
-
-        // Titulo encima del encabezado --
-        &__ontitle {
-            width: 165px;
-            text-transform: uppercase;
-            font-size: 12px;
-            font-style: italic;
-            border-radius: 20px;
-            border: .5px solid ab.$yellow-op;
-            padding-right: 10px;
-            background-color: ab.$bg-btn;
-            @include ab.inline();
-            margin-bottom: ab.m-all('suma', 5);
-
-            display: grid;
-            grid-template-columns: 20px 1fr;
-            align-items: center;
-        }
-
-        // Encabezado h1 title --
-        &__title {
-            max-width: 555px;
-            @include ab.inline();
-            font-family: ab.$title;
-            font-size: ab.$size-title;
-            font-weight: 900;
-            line-height: ab.$line-title;
-            letter-spacing: -2px;
-            text-transform: uppercase;
-            color: ab.$heading-color;
-        }
-
-        // Span dentro del h1 -
-        &__span {
-            background-image: linear-gradient(to right, #fbc02d 40%, #ffffff);
-            color: transparent;
-            background-clip: text;
-        }
-
-        &__subtitle {
-            font-size: 20px;
-            text-transform: capitalize;
-            word-spacing: 3px;
-            letter-spacing: 4px;
-            color: white;
-            margin-bottom: ab.$mb;
-        }
-
-        //  Encabezado h2 --
-        &__h2 {
-            font-size: ab.$size-title;
-            font-family: ab.$sub-title;
-            font-weight: 400;
-            display: inline-flex;
-            margin-bottom: ab.$mb;
-            @include ab.inline();
-        }
-
-        // Texto debajo del encabezado --
-        &__text {
-            max-width: 280px;
-            font-weight: 600;
-            @include ab.inline();
-            margin-bottom: ab.m-all('suma', 10);
-        }
-
-        // Contenedor de botones --
-        &__container { 
-            width: clamp(250px, -179.39px + 114.50vw, 700px);
-            @include ab.inline();
-        }
-
-        // Estilos generales de los botones --
-        &__btn {
-            @include ab.inline();
-            color: ab.$bg-body;
-            font-weight: 700;
-            font-size: 16px;
-            border-radius: 8px;
-        }
-
-        // btn uno -
-        .uno {
-            background-color: ab.$yellow;
-            padding: 10px 30px;
-            width: 182px;
-            margin-bottom: ab.$mb;
-        }
-
-        // btn dos -
-        .dos {
-            width: 185px;
-            background-color: ab.$bg-btn-hero;
-            color: ab.$text-color;
-            border: .5px solid ab.$text-color-tertiary;
-            padding: 10px 20px;
-        }
+    // Contenedor de eapaceado ---
+    .container {
+      display: grid;
+      text-align: center;
     }
 
-    // SECTION NEXT GAME -->
-    &__next {
-        position: relative;
-        font-family: ab.$title;
-        background-image: radial-gradient(at center, #494848a6 , #000000 70%);
-        
-        &__game {
-            text-align: center;
-            display: grid;
-            place-items: center;
-            padding: 70px 0;
+    // Titulo encima del encabezado --
+    &__ontitle {
+      width: 165px;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-style: italic;
+      border-radius: 20px;
+      border: 0.5px solid ab.$yellow-op;
+      padding-right: 10px;
+      background-color: ab.$bg-btn;
+      @include ab.inline();
+      margin-bottom: ab.m-all("suma", 5);
 
-            h4 {
-                width: 150px;
-                font-size: 25px;
-                font-weight: 900;
-                line-height: 24px;
-                padding: 20px 0;
-                margin: 0 auto;
-                z-index: 5;
-            }
-
-            p {
-                z-index: 5;
-                font-size: 80px;
-                font-weight: 900;
-            }
-
-            figure {
-                z-index: 3;
-                width: 200px;
-            }
-        }
+      display: grid;
+      grid-template-columns: 20px 1fr;
+      align-items: center;
     }
 
-    &__next::before {
-        content: '';
-        width: 20%;
-        height: 80%;
-        position: absolute;
-        top: 10%;
-        left: 0;
-        background-image: url(../../../img/punto.png);
+    // Encabezado h1 title --
+    &__title {
+      max-width: 555px;
+      @include ab.inline();
+      font-family: ab.$title;
+      font-size: ab.$size-title;
+      font-weight: 900;
+      line-height: ab.$line-title;
+      letter-spacing: -2px;
+      text-transform: uppercase;
+      color: ab.$heading-color;
     }
 
-    &__next::after {
-        content: '';
-        width: 20%;
-        height: 80%;
-        position: absolute;
-        top: 10%;
-        right: 0;
-        background-image: url(../../../img/punto.png);
+    // Span dentro del h1 -
+    &__span {
+      background-image: linear-gradient(to right, #fbc02d 40%, #ffffff);
+      color: transparent;
+      background-clip: text;
     }
 
-    // SECCION GALERIA -->
-    &__galery {
-        position: relative;
-        // background-color: #827659;
-        background-image: radial-gradient(circle, #494848a6 -110%, #020202 90%);
+    &__subtitle {
+      font-size: 20px;
+      text-transform: capitalize;
+      word-spacing: 3px;
+      letter-spacing: 4px;
+      color: white;
+      margin-bottom: ab.$mb;
+    }
+
+    //  Encabezado h2 --
+    &__h2 {
+      font-size: ab.$size-title;
+      font-family: ab.$sub-title;
+      font-weight: 400;
+      display: inline-flex;
+      margin-bottom: ab.$mb;
+      @include ab.inline();
+    }
+
+    // Texto debajo del encabezado --
+    &__text {
+      max-width: 280px;
+      font-weight: 600;
+      @include ab.inline();
+      margin-bottom: ab.m-all("suma", 10);
+    }
+
+    // Contenedor de botones --
+    &__container {
+      width: clamp(250px, -179.39px + 114.5vw, 700px);
+      @include ab.inline();
+    }
+
+    // Estilos generales de los botones --
+    &__btn {
+      @include ab.inline();
+      color: ab.$bg-body;
+      font-weight: 700;
+      font-size: 16px;
+      border-radius: 8px;
+    }
+
+    // btn uno -
+    .uno {
+      background-color: ab.$yellow;
+      padding: 10px 30px;
+      width: 182px;
+      margin-bottom: ab.$mb;
+    }
+
+    // btn dos -
+    .dos {
+      width: 185px;
+      background-color: ab.$bg-btn-hero;
+      color: ab.$text-color;
+      border: 0.5px solid ab.$text-color-tertiary;
+      padding: 10px 20px;
+    }
+  }
+
+  // SECTION NEXT GAME -->
+  &__next {
+    position: relative;
+    font-family: ab.$title;
+    background-image: radial-gradient(at center, #494848a6, #000000 70%);
+
+    &__game {
+      text-align: center;
+      display: grid;
+      place-items: center;
+      padding: 70px 0;
+
+      h4 {
+        width: 150px;
+        font-size: 25px;
+        font-weight: 900;
+        line-height: 24px;
+        padding: 20px 0;
         margin: 0 auto;
-        padding-block: 120px 80px;
-        
-        img {
-            border-radius: 8px;
-            object-fit: cover;
-            object-position: center 20%;
-            margin-bottom: 20px;
-        }
-        
-        &__grid-2, &__grid-4 {
-            margin: 0 auto;
-            max-width: 570px;
-            z-index: 2;
-            padding-bottom: 40px;
-        }
-        
-        &__text1 {
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            margin: 10px 0;
-        }
+        z-index: 5;
+      }
 
-        &__h4 {
-            color: ab.$yellow;
-            font-size: 54px;
-            font-family: ab.$title;
-            line-height: 45px;
-            margin-bottom: 24px;
-        }
+      p {
+        z-index: 5;
+        font-size: 80px;
+        font-weight: 900;
+      }
 
-        &__text2 {
-            margin-bottom: 10px;
-        }
+      figure {
+        z-index: 3;
+        width: 200px;
+      }
+    }
+  }
+
+  &__next::before {
+    content: "";
+    width: 20%;
+    height: 80%;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    background-image: url(../../../img/punto.png);
+  }
+
+  &__next::after {
+    content: "";
+    width: 20%;
+    height: 80%;
+    position: absolute;
+    top: 10%;
+    right: 0;
+    background-image: url(../../../img/punto.png);
+  }
+
+  // SECCION GALERIA -->
+  &__galery {
+    position: relative;
+    background-image: radial-gradient(circle, #494848a6 -110%, #020202 90%);
+    margin: 0 auto;
+    padding-block: 120px 80px;
+
+    img {
+      border-radius: 8px;
+      object-fit: cover;
+      object-position: center 20%;
+      margin-bottom: 20px;
     }
 
-    &__galery::before {
-        content: '';
-        width: 40%;
-        height: 80%;
-        position: absolute;
-        top: 10%;
-        right: 20%;
-        background-image: url(../../../img/punto.png);
+    &__grid-2,
+    &__grid-4 {
+      margin: 0 auto;
+      max-width: 570px;
+      z-index: 2;
+      padding-bottom: 40px;
     }
 
-    // SECCION DE JUGADORES -->
-    &__players {
-        position: relative;
-        padding-block: ab.$mb-sections + 60;
-        background-image: radial-gradient(at center top, #494848a6 -40%, #020202 70%);
-
-        .container {
-            position: relative;
-            text-align: center;
-        }
-
-        .container::before {
-            content: '';
-            width: 70%;
-            height: 80%;
-            position: absolute;
-            top: 0;
-            left: 14.6%;
-            background-image: url(../../../img/punto.png);
-        }
-
-        &__text {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            text-transform: uppercase;
-            padding-bottom: 20px;
-
-            p {
-                font-size: 14px;
-                letter-spacing: 4px;
-                color: ab.$yellow;
-                padding-bottom: 10px;
-            }
-
-            h3 {
-                color: #827659;
-                font-size: ab.$size-title-v1;
-                font-weight: 700;
-                line-height: ab.$line-title;
-                letter-spacing: -2.6px;
-                margin-bottom: ab.$mb + 10;
-            }
-
-            p, h3 {
-                z-index: 1;
-            }
-        }
-
-        .carousel__container {
-            display: grid;
-            justify-content: center
-        }
-
-        .carousel__flex1 {
-            @include ab.carousel(--carousel1);
-        }
-
-        .carousel__flex2 {
-            @include ab.carousel(--carousel2);
-        }
-        
-        &__photos {
-            position: relative;
-            flex: 0 0 100%;
-            border-radius: 8px;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            scroll-snap-align: start;
-            
-            img {
-                transition: all 0.4s ease;
-                mask-image: linear-gradient(black 60%, transparent)
-            }
-
-            @extend .hover-card;
-
-            @include ab.query(medium) {
-                flex: 0 0 335px;
-            }
-            @include ab.query(large) {
-                flex: 0 0 298px;
-            }
-            @include ab.query(x-l) {
-                flex: 0 0 270px;
-            }
-        }
-
-        &__info {
-            width: 100%;
-            padding: 10px;
-            background-color: #333232;
-            border-right: 6px solid ab.$green;
-            position: absolute;
-            bottom: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            backdrop-filter: blur(8px);
-            transition: clip-path 0.4s ease;
-
-            h4 {
-                font-size: 24px;
-            }
-        }
-
-        &__coach {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 30px;
-            
-            img {
-                mask-image: linear-gradient(black 90%, transparent);
-                transition: all 0.5s ease;
-            }
-
-            article:hover {
-                img {
-                    transform: scale(1.1);
-                    filter: drop-shadow(0 0 10px );
-                }
-            }
-        }
+    &__text1 {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      margin: 10px 0;
     }
 
-    // SECCION CALENDARIO -->
-    &__calendario {
-        padding-bottom: 50px;
-
-        table, th, td {
-            border-collapse: collapse;
-            overflow: hidden;
-        } 
-
-        td, th {
-            position: relative;
-            z-index: 8;
-            padding-block: 28px;
-        }
-
-        th {
-            color: #fbc02d;
-            font-size: clamp(14px, 8.27px + 1.53vw, 20px);
-        }
-
-        tr {
-            // border-bottom: 1px solid ab.$text-color-secundary;
-            transition: all .7s ease;
-
-            @extend .tr-hover;
-        }
-
-        table {
-            width: 100%;
-            text-align: center;
-            font-size: 14px;
-            background-image: linear-gradient(to left, #000000, #6f6b6b9e, #000);
-            padding: 10px;
-
-            caption {
-                font-size: 40px;
-                font-weight: 500;
-                color: #827659;
-            }
-
-            .local {
-                @extend .calendario-after;
-            }
-            
-            .visitante {
-                @extend .calendario-before;
-            }
-
-            [data-team="castell"]::before {
-                background-image: map.get(ab.$logos-url, castell);
-            }
-
-            [data-team="castell"]::after {
-                background-image: map.get(ab.$logos-url, castell);
-            }
-
-            [data-team="ferrer"]::after {
-                background-image: map.get(ab.$logos-url, ferrer);
-            }
-
-            [data-team="ciutadella"]::before {
-                background-image: map.get(ab.$logos-url, ciutadella);
-            }
-
-            [data-team="mayurqa"]::after {
-                background-image: map.get(ab.$logos-url, mayurqa);
-            }
-
-            [data-team="anaya"]::before {
-                background-image: map.get(ab.$logos-url, anaya);
-            }
-
-            [data-team="soller"]::after {
-                background-image: map.get(ab.$logos-url, soller);
-            }
-
-            [data-team="bunyola"]::before {
-                background-image: map.get(ab.$logos-url, bunyola);
-            }
-
-            [data-team="rafal"]::before {
-                background-image: map.get(ab.$logos-url, rafal);
-            }
-
-            [data-team="portol"]::before {
-                background-image: map.get(ab.$logos-url, portol);
-            }
-
-            [data-team="manacor"]::after {
-                background-image: map.get(ab.$logos-url, manacor);
-            }
-
-            [data-team="palma"]::after {
-                background-image: map.get(ab.$logos-url, palma);
-            }
-
-            [data-team="muro"]::after {
-                background-image: map.get(ab.$logos-url, muro);
-            }
-        }
+    &__h4 {
+      color: ab.$yellow;
+      font-size: 54px;
+      font-family: ab.$title;
+      line-height: 45px;
+      margin-bottom: 24px;
     }
 
-    // SECCION VIDEO -->
-    &__video {
-        background-image: radial-gradient(circle, #000000a1 20%, #000000 ), url(../../../img/valon-voley.png);
-        background-repeat: no-repeat;
-        background-size: 60%;
-        background-position: center;
-        height: 50vh;
-        display: grid;
-        place-content: center;
-        padding: 40px 0;
-        position: relative;
+    &__text2 {
+      margin-bottom: 10px;
+    }
+  }
 
-        .btn-mostrar {
-            width: max-content;
-            color: ab.$amarillo;
-            display: flex;
-            border: 7px solid ab.$amarillo;
-            border-radius: 50%;
-            padding: 8px;
-        }
+  &__galery::before {
+    content: "";
+    width: 40%;
+    height: 80%;
+    position: absolute;
+    top: 10%;
+    right: 20%;
+    background-image: url(../../../img/punto.png);
+  }
 
-        .btn-cerrar {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            cursor: default;
-        }
+  // SECCION DE JUGADORES -->
+  &__players {
+    position: relative;
+    padding-block: ab.$mb-sections + 60;
+    background-image: radial-gradient(
+      at center top,
+      #494848a6 -40%,
+      #020202 70%
+    );
 
-        input {
-            display: none;
-        }
-
-        &__container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #000000e7;
-            cursor: pointer;
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 100;
-        }
-        
-        video {
-            transition: all .6s ease;
-            border-radius: 10px;
-            width: ab.$width-video;
-        }
-
-        input:checked ~ .main__video__container {
-            display: flex;
-        }
-
-        .momentos {
-            display: flex;
-            gap: 2px;
-            align-items: center;
-            text-shadow: 0px 0px 30px;
-            
-            span {
-                font-size: 60px;
-                text-transform: uppercase;
-                font-family: ab.$title;
-                font-weight: 800;
-            }
-        }
+    .container {
+      position: relative;
+      text-align: center;
     }
 
-    &__video::before {
-        content: '';
-        width: 25%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: url(../../../img/punto.png);
+    .container::before {
+      content: "";
+      width: 70%;
+      height: 80%;
+      position: absolute;
+      top: 0;
+      left: 14.6%;
+      background-image: url(../../../img/punto.png);
     }
 
-    &__video::after {
-        content: '';
-        width: 20%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        right: 0;
-        background: url(../../../img/punto.png);
+    &__text {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      text-transform: uppercase;
+      padding-bottom: 20px;
+
+      p {
+        font-size: 14px;
+        letter-spacing: 4px;
+        color: ab.$yellow;
+        padding-bottom: 10px;
+      }
+
+      h3 {
+        color: #827659;
+        font-size: ab.$size-title-v1;
+        font-weight: 700;
+        line-height: ab.$line-title;
+        letter-spacing: -2.6px;
+        margin-bottom: ab.$mb + 10;
+      }
+
+      p,
+      h3 {
+        z-index: 1;
+      }
     }
 
-    // SECCION MAPS -->
-    &__maps {
-        padding-block: ab.$mb-sections;
-        p {
-            max-width: 400px;
-            letter-spacing: 1px;
-            text-align: center;
-            margin-inline: auto;
-            margin-bottom: 30px;
-
-            adress {
-                font-style: italic;
-                color: ab.$yellow;
-            }
-        }
+    .carousel__flex1,
+    .carousel__flex2 {
+      gap: 30px;
     }
+
+    .carousel__flex1 {
+      @include ab.carousel(--carousel1);
+    }
+
+    .carousel__flex2 {
+      @include ab.carousel(--carousel2);
+    }
+
+    &__photos {
+      position: relative;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      flex: 0 0 100%;
+      overflow: hidden;
+      scroll-snap-align: start;
+
+      img {
+        transition: all 0.4s ease;
+        mask-image: linear-gradient(black 60%, transparent);
+      }
+
+      @extend .hover-card;
+
+      @include ab.query(medium) {
+        flex: 0 0 335px;
+      }
+      @include ab.query(large) {
+        flex: 0 0 298px;
+      }
+      @include ab.query(x-l) {
+        flex: 0 0 270px;
+      }
+    }
+
+    &__info {
+      width: 100%;
+      padding: 10px;
+      background-color: #333232;
+      border-right: 6px solid ab.$green;
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      backdrop-filter: blur(8px);
+      transition: clip-path 0.4s ease;
+
+      h4 {
+        font-size: 24px;
+      }
+    }
+
+    &__coach {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 30px;
+
+			article {
+				display: grid;
+			}
+
+      img {
+        mask-image: linear-gradient(black 90%, transparent);
+        transition: all 0.5s ease;
+      }
+
+      article:hover img {
+        transform: scale(1.1);
+        filter: drop-shadow(0 0 10px);
+      }
+    }
+  }
+
+  // SECCION CALENDARIO -->
+  &__calendario {
+    padding-bottom: 50px;
+
+    table,
+    th,
+    td {
+      border-collapse: collapse;
+      overflow: hidden;
+    }
+
+    td,
+    th {
+      position: relative;
+      z-index: 8;
+      padding-block: 28px;
+    }
+
+    th {
+      color: #fbc02d;
+      font-size: clamp(14px, 8.27px + 1.53vw, 20px);
+    }
+
+    tr {
+      border-bottom: 1px solid ab.$text-color-secundary;
+      transition: all 0.7s ease;
+
+      @extend .tr-hover;
+    }
+
+    table {
+      width: 100%;
+      text-align: center;
+      font-size: 14px;
+      background-image: linear-gradient(to left, #000000, #6f6b6b9e, #000);
+      padding: 10px;
+
+      caption {
+        font-size: 40px;
+        font-weight: 500;
+        color: #827659;
+      }
+
+      .local {
+        @extend .calendario-after;
+      }
+
+      .visitante {
+        @extend .calendario-before;
+      }
+
+      [data-team="castell"]::before {
+        background-image: map.get(ab.$logos-url, castell);
+      }
+
+      [data-team="castell"]::after {
+        background-image: map.get(ab.$logos-url, castell);
+      }
+
+      [data-team="ferrer"]::after {
+        background-image: map.get(ab.$logos-url, ferrer);
+      }
+
+      [data-team="ciutadella"]::before {
+        background-image: map.get(ab.$logos-url, ciutadella);
+      }
+
+      [data-team="mayurqa"]::after {
+        background-image: map.get(ab.$logos-url, mayurqa);
+      }
+
+      [data-team="anaya"]::before {
+        background-image: map.get(ab.$logos-url, anaya);
+      }
+
+      [data-team="soller"]::after {
+        background-image: map.get(ab.$logos-url, soller);
+      }
+
+      [data-team="bunyola"]::before {
+        background-image: map.get(ab.$logos-url, bunyola);
+      }
+
+      [data-team="rafal"]::before {
+        background-image: map.get(ab.$logos-url, rafal);
+      }
+
+      [data-team="portol"]::before {
+        background-image: map.get(ab.$logos-url, portol);
+      }
+
+      [data-team="manacor"]::after {
+        background-image: map.get(ab.$logos-url, manacor);
+      }
+
+      [data-team="palma"]::after {
+        background-image: map.get(ab.$logos-url, palma);
+      }
+
+      [data-team="muro"]::after {
+        background-image: map.get(ab.$logos-url, muro);
+      }
+    }
+  }
+
+  // SECCION VIDEO -->
+  &__video {
+    background-image:
+      radial-gradient(circle, #000000a1 20%, #000000),
+      url(../../../img/valon-voley.png);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+    height: 50vh;
+    display: grid;
+    place-content: center;
+    padding: 40px 0;
+    position: relative;
+
+    .btn-mostrar {
+      width: max-content;
+      color: ab.$amarillo;
+      display: flex;
+      border: 7px solid ab.$amarillo;
+      border-radius: 50%;
+      padding: 8px;
+    }
+
+    .btn-cerrar {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      cursor: default;
+    }
+
+    input {
+      display: none;
+    }
+
+    &__container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000000e7;
+      cursor: pointer;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+    }
+
+    video {
+      transition: all 0.6s ease;
+      border-radius: 10px;
+      width: ab.$width-video;
+    }
+
+    input:checked ~ .main__video__container {
+      display: flex;
+    }
+
+    .momentos {
+      display: flex;
+      gap: 2px;
+      align-items: center;
+      text-shadow: 0px 0px 30px;
+
+      span {
+        font-size: 60px;
+        text-transform: uppercase;
+        font-family: ab.$title;
+        font-weight: 800;
+      }
+    }
+  }
+
+  &__video::before {
+    content: "";
+    width: 25%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../../../img/punto.png);
+  }
+
+  &__video::after {
+    content: "";
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url(../../../img/punto.png);
+  }
+
+  // SECCION MAPS -->
+  &__maps {
+    padding-block: ab.$mb-sections;
+    p {
+      max-width: 400px;
+      letter-spacing: 1px;
+      text-align: center;
+      margin-inline: auto;
+      margin-bottom: 30px;
+
+      adress {
+        font-style: italic;
+        color: ab.$yellow;
+      }
+    }
+  }
 }

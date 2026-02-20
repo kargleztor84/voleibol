@@ -1,105 +1,104 @@
-@use '../abstracts' as ab;
-@use '../base/helpers' as hp;
-@use 'sass:map';
+@use "../abstracts" as ab;
+@use "../base/helpers" as hp;
+@use "sass:map";
 
 .main {
-    @include ab.query(medium) {
+  @include ab.query(medium) {
+    &__next {
+      &__game {
+        position: relative;
+      }
 
-        &__next {
-            &__game {
-                position: relative;
-            }
+      figure {
+        width: 250px;
+      }
 
-            figure {
-                width: 250px;
-            }
-
-            &__game::before{
-                content: 'LIVE';
-                width: auto;
-                height: auto;
-                position: absolute;
-                font-size: 250px;
-                font-weight: 900;
-                letter-spacing: -12px;
-                color: #00000071;
-            }
-        }
-
-        &__players {
-            &__text {
-                margin-bottom: 40px;
-
-                h3 {
-                    margin: 0;
-                }
-            }
-
-            &__coach {
-                flex-direction: row;
-            }
-        }
-
-        &__players::before {
-            content: 'equipazo';
-            width: clamp(650px, 84vw, 1200px);
-            position: absolute;
-            top: -10px;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-            font-size: clamp(185px, 30.71px + 20.09vw, 320px);
-            font-family: ab.$title;
-            font-weight: 900;
-            letter-spacing: -18px;
-            text-transform: uppercase;
-            color: #000000;
-        }
-
-        &__galery {
-            &__grid {
-                text-align: start;
-                display: grid;
-                align-items: center;
-                gap: 20px;
-                grid-template-columns: repeat(3, 1fr);
-                grid-template-rows: repeat(2, 1fr);
-
-                &-1 {
-                    grid-area: 1 / 1 / span 1 / span 1;
-                    align-self: stretch;
-                }
-
-                &-4 {
-                    grid-area: 2 / 1 / span 2 / span 2;
-                }
-
-                &-3 {
-                    grid-area: 2 / 3 / span 2 / span 1;
-                    align-self: stretch;
-                }
-
-                &-2 {
-                    grid-area: 1 / 2 / span 1 / span 2;
-                }
-            }
-        }
+      &__game::before {
+        content: "LIVE";
+        width: auto;
+        height: auto;
+        position: absolute;
+        font-size: 250px;
+        font-weight: 900;
+        letter-spacing: -12px;
+        color: #00000071;
+      }
     }
 
-    @include ab.query('large') {
-        &__next {
-            &__game {
-                position: relative;
-                grid-template-columns: repeat(5, 1fr);
-            }
+    &__players {
+      &__text {
+        margin-bottom: 40px;
+
+        h3 {
+          margin: 0;
         }
+      }
+
+      &__coach {
+        flex-direction: row;
+      }
     }
 
-    @include ab.query(x-l) {
-        &__galery {
-            &__aboutus {
-                padding: 0 20px 0 66px;
-            }
-        }
+    &__players::before {
+      content: "equipazo";
+      width: clamp(650px, 84vw, 1200px);
+      position: absolute;
+      top: -10px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      font-size: clamp(185px, 30.71px + 20.09vw, 320px);
+      font-family: ab.$title;
+      font-weight: 900;
+      letter-spacing: -18px;
+      text-transform: uppercase;
+      color: #000000;
     }
+
+    &__galery {
+      &__grid {
+        text-align: start;
+        display: grid;
+        align-items: center;
+        gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+
+        &-1 {
+          grid-area: 1 / 1 / span 1 / span 1;
+          align-self: stretch;
+        }
+
+        &-4 {
+          grid-area: 2 / 1 / span 2 / span 2;
+        }
+
+        &-3 {
+          grid-area: 2 / 3 / span 2 / span 1;
+          align-self: stretch;
+        }
+
+        &-2 {
+          grid-area: 1 / 2 / span 1 / span 2;
+        }
+      }
+    }
+  }
+
+  @include ab.query("large") {
+    &__next {
+      &__game {
+        position: relative;
+        grid-template-columns: repeat(5, 1fr);
+      }
+    }
+  }
+
+  @include ab.query(x-l) {
+    &__galery {
+      &__aboutus {
+        padding: 0 20px 0 66px;
+      }
+    }
+  }
 }

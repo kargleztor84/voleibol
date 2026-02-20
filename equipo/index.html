@@ -1,282 +1,661 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
+  <head>
     <meta charset="UTF-8" />
 
-	<link rel="apple-touch-icon" sizes="180x180" href="../img/favicons/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="../img/favicons/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="../img/favicons/favicon-16x16.png">
-	<link rel="shortcut icon" href="../img/favicons/favicon.ico" type="image/x-icon">
-	<link rel="manifest" href="../img/favicons/site.webmanifest">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../img/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../img/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../img/favicons/favicon-16x16.png"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/favicons/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="manifest" href="../img/favicons/site.webmanifest" />
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>CV Es Castell | Equipo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV Es Castell | Equipo</title>
 
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Nobile:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Water+Brush&display=swap" rel="stylesheet">
-</head>
-<body>
-	<div class="layout">
-		<!-- HEADER -->
-		<header class="header">
-			<!-- Contenedor limitados de espacio -->
-			<div class="container">
-				<!-- Nav Bar menu -->
-				<nav class="header__nav">
-					<!-- Logo -->
-					<a href="#" class="header__nav__logo">
-						cv es castell
-					</a>
-	
-					<!-- Input triggle event -->
-					<section class="header__nav__toggle">
-						<input type="checkbox" id="triggle" name="estado"
-						class="header__nav__input">
-	
-						<label for="triggle"  class="header__nav__icon">
-						</label>
-					</section>
-	
-					<!-- Nav Menu -->
-					<ul class="header__nav__list">
-						<li class="header__nav__li">
-							<a href="../index.html" class="header__nav __link">inicio</a>
-						</li>
-						<li class="header__nav__li">
-							<a href="#" class="header__nav __link">fichajes</a>
-						</li>
-						<li class="header__nav__li">
-							<a href="#partidos" class="header__nav __link">calendario</a>
-						</li>
-						<li class="header__nav__li">
-							<a href="#" class="header__nav __link">contacto</a>
-						</li>
-					</ul>
-					<!-- btn Únete -->
-					<nav class="header__nav__follow">
-						<a href="https://www.youtube.com/@ClubVoleibolEsCastell" target="_blank" class="footer__nav__social">
-							<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube" viewBox="0 0 24 24"><path fill="none" stroke="none" d="M0 0h24v24H0z"/><path d="M2 8a4 4 0 0 1 4-4h12a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/><path d="m10 9 5 3-5 3z"/></svg>
-						</a>
-						<a href="https://www.instagram.com/cvescastell/" target="_blank" class="footer__nav__social">
-							<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none"
-							stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z"/><path d="M4 8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0m7.5-4.5v.01"/></svg>
-						</a>
-					</nav>
-				</nav>
-			</div>
-		</header>
-		<!-- MAIN -->
-		<main class="main">
-			<section class="hero__equipo">
-				<div class="container">
-					<p>Fichas completas</p>
-					<h1 class="hero__title">Nuestro equipo</h1>
-				</div>
-			</section>
-			<section class="players">
-				<div class="container">
-					<article class="players__text">
-						<p>juagadores</p>
-						<h2 class="players__subtitle">posiciones</h2>
-					</article>
-					<section class="players__container">
-						<!-- Colocadores -->
-						<section class="players-p" data-posi="colocadores">
-							<h4 class="colocador__text">
-								Colocadores
-							</h4>
-							<div class="posiciones colocadores">
-								<article class="main__players__photos">
-									<img src="../img/jugadores/nik.png" alt="">
-									<section class="main__players__info">
-										<p>NIKOLAY DIMITROV</p>
-										<h4>1,79cm</h4>
-									</section>
-								</article>
-								<article class="main__players__photos">
-									<img src="../img/jugadores/gille.png" alt="">
-									<section class="main__players__info">
-										<p>GILLERMO MERINO</p>
-										<h4>1,72cm</h4>
-									</section>
-								</article>
-							</div>
-						</section>
-						<!-- Puntas -->
-						<section class="players-p" data-posi="puntas">
-							<h4 class="colocador__text">
-								Puntas
-							</h4>
-							<div class="posiciones puntas">
-								<article class="main__players__photos">
-									<img src="../img/jugadores/alex.png" alt="">
-									<section class="main__players__info">
-										<p>ALEX SIMO</p>
-										<h4>1,93cm</h4>
-									</section>
-								</article>
-								<article class="main__players__photos">
-									<img src="../img/jugadores/bruno.png" alt="">
-									<section class="main__players__info">
-										<p>BRUNO VICTORY</p>
-										<h4>1,80cm</h4>
-									</section>
-								</article>
-								<article class="main__players__photos">
-									<img src="../img/jugadores/alejo.png" alt="">
-									<section class="main__players__info">
-										<p>ALEJANDRO ANDRADE</p>
-										<h4>1,83cm</h4>
-									</section>
-								</article>
-								<article class="main__players__photos">
-									<img src="../img/jugadores/eloy.png" alt="">
-									<section class="main__players__info">
-										<p>ELOY AMAT DE LA RUBIA</p>
-										<h4>1,80cm</h4>
-									</section>
-								</article>
-								<article class="main__players__photos">
-									<img src="../img/jugadores/hugo.png" alt="">
-									<section class="main__players__info">
-										<p>HUGO TORRES</p>
-										<h4>1,74cm</h4>
-									</section>
-								</article>
-							</div>
-						</section>
-						<!-- Opuesto -->
-						<section class="players-p" data-posi="opuestos">
-							<h4 class="colocador__text">
-								Opuestos
-							</h4>
-							<div class="posiciones opuestos">
-								<article class="main__players__photos">
-									<img src="../img/jugadores/ben.png" alt="">
-									<section class="main__players__info">
-										<p>BENJAMIN PLUCKROSE</p>
-										<h4>1,95cm</h4>
-									</section>
-								</article>
-								<article class="main__players__photos">
-									<img src="../img/jugadores/vicern.png" alt="">
-									<section class="main__players__info">
-										<p>VICENC GOMILA</p>
-										<h4>1,81cm</h4>
-									</section>
-								</article>
-							</div>
-						</section>
-						<!-- Centrales -->
-						<section class="players-p" data-posi="centrales">
-							<h4 class="colocador__text">
-								Centrales
-							</h4>
-							<div class="posiciones centrales">
-								<article class="main__players__photos">
-									<img src="../img/jugadores/marc.png" alt="">
-									<section class="main__players__info">
-										<p>MARC TUDURÍ</p>
-										<h4>1,94cm</h4>
-									</section>
-								</article>
-								<article class="main__players__photos">
-									<img src="../img/jugadores/gim.png" alt="">
-									<section class="main__players__info">
-										<p>GUIM GAVALDA</p>
-										<h4>1,93cm</h4>
-									</section>
-								</article>
-								<article class="main__players__photos">
-									<img src="../img/jugadores/carlos.png" alt="">
-									<section class="main__players__info">
-										<p>CARLOS GONZALEZ</p>
-										<h4>1,85cm</h4>
-									</section>
-								</article>
-							</div>
-						</section>
-						<!-- Liberos -->
-						<section class="players-p" data-posi="liberos">
-							<h4 class="colocador__text">
-								Liberos
-							</h4>
-							<div class="posiciones liberos">
-								<article class="main__players__photos">
-									<img src="../img/jugadores/adri.png" alt="">
-									<section class="main__players__info">
-										<p>ADRIAN GIL</p>
-										<h4>1,66cm</h4>
-									</section>
-								</article>
-								<article class="main__players__photos">
-									<img src="../img/jugadores/oscar.png" alt="">
-									<section class="main__players__info">
-										<p>OSCAR FERNANDEZ</p>
-										<h4>1,79cm</h4>
-									</section>
-								</article>						
-							</div>
-						</section>
-					</section>
-				</div>
-			</section>
-		</main>
-		<!-- FOOTER -->
-		<footer class="footer">
-			<!-- Contenedor limitados de espacio -->
-			<div class="container">
-				<!-- Nav Menu del footer -->
-				<nav class="footer__nav">
-					<!-- section logo -->
-					<section class="footer__nav__text">
-						<a href="#" class="footer__nav__logo">
-							cv es castell
-						</a>
-						<p>
-							Fomentando el deporte y los valores con el voleibol.
-						</p>
-					</section>
-					<!-- Section sobre el club -->
-					<section class="footer__nav__club">
-						<h4>El Club</h4>
-						<a href="#" class="footer__club__link">
-							Directiva
-						</a>
-						<a href="#" class="footer__club__link">
-							Contactar
-						</a>
-					</section>
-					<!-- Section de los equipos del club -->
-					<section class="footer__nav__equipos">
-						<h4>Equipos</h4>
-						<a href="#" class="footer__club__link">
-							Senior Maculino
-						</a>
-						<p>Senior Femenino</p>
-						<p>Juvenil</p>
-					</section>
-					<!-- Nuestras redes sociales -->
-					<nav class="footer__nav__redes">
-						<h4>Siguenos</h4>
-						<a href="https://www.instagram.com/cvescastell/" target="_blank" class="footer__nav__social">
-							<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z"/><path d="M4 8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0m7.5-4.5v.01"/></svg>
-						</a>
-						<a href="https://www.youtube.com/@ClubVoleibolEsCastell" target="_blank" class="footer__nav__social">
-							<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube" viewBox="0 0 24 24"><path fill="none" stroke="none" d="M0 0h24v24H0z"/><path d="M2 8a4 4 0 0 1 4-4h12a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"/><path d="m10 9 5 3-5 3z"/></svg>
-						</a>						
-					</nav>
-				</nav>
-				<!-- Terminos legales -->
-				<section class="footer__legal">
-					<p>
-						© 2026 Club Voleibol Es Castell. Todos los derechos reservados.
-					</p>
-				</section>
-			</div>
-		</footer>
-	</div>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nobile:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Water+Brush&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="layout">
+      <!-- HEADER -->
+      <header class="header">
+        <!-- Contenedor limitados de espacio -->
+        <div class="container">
+          <!-- Nav Bar menu -->
+          <nav class="header__nav">
+            <!-- Logo -->
+            <a href="#" class="header__nav__logo"> cv es castell </a>
+
+            <!-- Input triggle event -->
+            <section class="header__nav__toggle">
+              <input
+                type="checkbox"
+                id="triggle"
+                name="estado"
+                class="header__nav__input"
+              />
+
+              <label for="triggle" class="header__nav__icon"> </label>
+            </section>
+
+            <!-- Nav Menu -->
+            <ul class="header__nav__list">
+              <li class="header__nav__li">
+                <a href="../index.html" class="header__nav __link">inicio</a>
+              </li>
+              <li class="header__nav__li">
+                <a href="#" class="header__nav __link">fichajes</a>
+              </li>
+              <li class="header__nav__li">
+                <a href="#partidos" class="header__nav __link">calendario</a>
+              </li>
+              <li class="header__nav__li">
+                <a href="#" class="header__nav __link">contacto</a>
+              </li>
+            </ul>
+            <!-- btn Únete -->
+            <nav class="header__nav__follow">
+              <a
+                href="https://www.youtube.com/@ClubVoleibolEsCastell"
+                target="_blank"
+                class="footer__nav__social"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="100%"
+                  height="100%"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"
+                  viewBox="0 0 24 24"
+                >
+                  <path fill="none" stroke="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M2 8a4 4 0 0 1 4-4h12a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"
+                  />
+                  <path d="m10 9 5 3-5 3z" />
+                </svg>
+              </a>
+              <a
+                href="https://www.instagram.com/cvescastell/"
+                target="_blank"
+                class="footer__nav__social"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="100%"
+                  height="100%"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"
+                  viewBox="0 0 24 24"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M4 8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"
+                  />
+                  <path d="M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0m7.5-4.5v.01" />
+                </svg>
+              </a>
+            </nav>
+          </nav>
+        </div>
+      </header>
+      <!-- MAIN -->
+      <main class="main">
+        <section class="hero__equipo">
+          <div class="container">
+            <p>Fichas completas</p>
+            <h1 class="hero__title">Nuestro equipo</h1>
+          </div>
+        </section>
+        <section class="players">
+          <div class="container">
+            <!-- Texto de la seccion -->
+            <article class="players__text">
+              <p>juagadores</p>
+              <h3 class="players__subtitle">posiciones</h3>
+            </article>
+
+            <!-- Seccion colocadores -->
+            <section class="positions">
+              <h2>COLOCADORES</h2>
+
+              <div class="cards scroll__button colocador">
+                <!-- colocador 1 -->
+                <article class="card">
+                  <!-- contenedor de trajetas -->
+                  <div class="card__container">
+
+                    <!-- tarjeta fontal -->
+                    <section class="front">
+                      <div class="container__img">
+                        <img src="../img/equipo_hover/niki_1.png" alt="Foto del juagador">
+                      </div>
+                      <article class="card__info">
+                        <h3>NIKOLAY DIMITROV</h3>
+                      </article>
+                    </section>
+
+                    <!-- tarjeta tracera -->
+                    <section class="back">
+                      <article class="card__info">
+                        <h3>NIKOLAY DIMITROV</h3>
+                        <section class="datos">
+                          <p>Edad: 33 años</p>
+                          <p>Altura: 1,79cm</p>
+                        </section>
+                      </article>
+                    </section>
+                  </div>
+                </article>
+
+                <!-- colocador 2 -->
+                <article class="card">
+                  <!-- contenedor de trajetas -->
+                  <div class="card__container">
+
+                    <!-- tarjeta fontal -->
+                    <section class="front">
+                      <div class="container__img">
+                        <img src="../img/equipo_hover/gille_1.png" alt="Foto del juagador">
+                      </div>
+                      <article class="card__info">
+                        <h3>GILLERMO MERINO</h3>
+                      </article>
+                    </section>
+
+                    <!-- tarjeta tracera -->
+                    <section class="back">
+                      <article class="card__info">
+                        <h3>GILLERMO MERINO</h3>
+                        <section class="datos">
+                          <p>Edad: 17 años</p>
+                          <p>Altura: 1,72cm</p>
+                        </section>
+                      </article>
+                    </section>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <!-- Seccion opuestos -->
+            <section class="positions">
+              <h2>OPUESTOS</h2>
+
+              <div class="cards scroll__button opuestos">
+                <!-- colocador 1 -->
+                <article class="card">
+                  <!-- contenedor de trajetas -->
+                  <div class="card__container">
+
+                    <!-- tarjeta fontal -->
+                    <section class="front">
+                      <div class="container__img">
+                        <img src="../img/equipo_hover/ben_1.png" alt="Foto del juagador">
+                      </div>
+                      <article class="card__info">
+                        <h3>BENJAMIN PULCKROSE</h3>
+                      </article>
+                    </section>
+
+                    <!-- tarjeta tracera -->
+                    <section class="back">
+                      <article class="card__info">
+                        <h3>BENJAMIN PULCKROSE</h3>
+                        <section class="datos">
+                          <p>Edad: 25 años</p>
+                          <p>Altura: 1,95cm</p>
+                        </section>
+                      </article>
+                    </section>
+                  </div>
+                </article>
+
+                <!-- colocador 2 -->
+                <article class="card">
+                  <!-- contenedor de trajetas -->
+                  <div class="card__container">
+
+                    <!-- tarjeta fontal -->
+                    <section class="front">
+                      <div class="container__img">
+                        <img src="../img/equipo_hover/vinc_1.png" alt="Foto del juagador">
+                      </div>
+                      <article class="card__info">
+                        <h3>VICENC GOMILA</h3>
+                      </article>
+                    </section>
+
+                    <!-- tarjeta tracera -->
+                    <section class="back">
+                      <article class="card__info">
+                        <h3>VICENC GOMILA</h3>
+                        <section class="datos">
+                          <p>Edad: 19 años</p>
+                          <p>Altura: 1,81cm</p>
+                        </section>
+                      </article>
+                    </section>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <!-- Seccion puntas -->
+            <section class="positions">
+              <h2>PUNTAS</h2>
+
+              <div class="cards scroll__button puntas">
+                <!-- PUNTA 1 -->
+                <article class="card">
+                  <!-- contenedor de trajetas -->
+                  <div class="card__container">
+
+                    <!-- tarjeta fontal -->
+                    <section class="front">
+                      <div class="container__img">
+                        <img src="../img/equipo_hover/alex_1.png" alt="Foto del juagador">
+                      </div>
+                      <article class="card__info">
+                        <h3>ALEX SIMO</h3>
+                      </article>
+                    </section>
+
+                    <!-- tarjeta tracera -->
+                    <section class="back">
+                      <article class="card__info">
+                        <h3>ALEX SIMO</h3>
+                        <section class="datos">
+                          <p>Edad: 25 años</p>
+                          <p>Altura: 1,93cm</p>
+                        </section>
+                      </article>
+                    </section>
+                  </div>
+                </article>
+
+                <!-- PUNTA 2 -->
+                <article class="card">
+                  <!-- contenedor de trajetas -->
+                  <div class="card__container">
+
+                    <!-- tarjeta fontal -->
+                    <section class="front">
+                      <div class="container__img">
+                        <img src="../img/equipo_hover/eloy_1.png" alt="Foto del juagador">
+                      </div>
+                      <article class="card__info">
+                        <h3>ELOY AMAT</h3>
+                      </article>
+                    </section>
+
+                    <!-- tarjeta tracera -->
+                    <section class="back">
+                      <article class="card__info">
+                        <h3>ELOY AMAT</h3>
+                        <section class="datos">
+                          <p>Edad: 17 años</p>
+                          <p>Altura: 1,80cm</p>
+                        </section>
+                      </article>
+                    </section>
+                  </div>
+                </article>
+
+                <!-- PUNTA 2 -->
+                <article class="card">
+                  <!-- contenedor de trajetas -->
+                  <div class="card__container">
+
+                    <!-- tarjeta fontal -->
+                    <section class="front">
+                      <div class="container__img">
+                        <img src="../img/equipo_hover/bruno_1.png" alt="Foto del juagador">
+                      </div>
+                      <article class="card__info">
+                        <h3>BRUNO VICTORY</h3>
+                      </article>
+                    </section>
+
+                    <!-- tarjeta tracera -->
+                    <section class="back">
+                      <article class="card__info">
+                        <h3>BRUNO VICTORY</h3>
+                        <section class="datos">
+                          <p>Edad: 19 años</p>
+                          <p>Altura: 1,80cm</p>
+                        </section>
+                      </article>
+                    </section>
+                  </div>
+                </article><!-- PUNTA 2 -->
+                <article class="card">
+                  <!-- contenedor de trajetas -->
+                  <div class="card__container">
+
+                    <!-- tarjeta fontal -->
+                    <section class="front">
+                      <div class="container__img">
+                        <img src="../img/equipo_hover/alejo_1.png" alt="Foto del juagador">
+                      </div>
+                      <article class="card__info">
+                        <h3>ALEJANDRO ANDRADE</h3>
+                      </article>
+                    </section>
+
+                    <!-- tarjeta tracera -->
+                    <section class="back">
+                      <article class="card__info">
+                        <h3>ALEJANDRO ANDRADE</h3>
+                        <section class="datos">
+                          <p>Edad: 19 años</p>
+                          <p>Altura: 1,83cm</p>
+                        </section>
+                      </article>
+                    </section>
+                  </div>
+                </article><!-- PUNTA 2 -->
+                <article class="card">
+                  <!-- contenedor de trajetas -->
+                  <div class="card__container">
+
+                    <!-- tarjeta fontal -->
+                    <section class="front">
+                      <div class="container__img">
+                        <img src="../img/equipo_hover/hugo_1.png" alt="Foto del juagador">
+                      </div>
+                      <article class="card__info">
+                        <h3>HUGO TORRES</h3>
+                      </article>
+                    </section>
+
+                    <!-- tarjeta tracera -->
+                    <section class="back">
+                      <article class="card__info">
+                        <h3>HUGO TORRES</h3>
+                        <section class="datos">
+                          <p>Edad: 22 años</p>
+                          <p>Altura: 1,74cm</p>
+                        </section>
+                      </article>
+                    </section>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <!-- Seccion centrales -->
+            <section class="positions">
+              <h2>CENTRALES</h2>
+
+              <div class="cards scroll__button centrales">
+
+                <!-- central 1 -->
+                <article class="card">
+                  <!-- contenedor de trajetas -->
+                  <div class="card__container">
+
+                    <!-- tarjeta fontal -->
+                    <section class="front">
+                      <div class="container__img">
+                        <img src="../img/equipo_hover/mark_1.png" alt="Foto del juagador">
+                      </div>
+                      <article class="card__info">
+                        <h3>MARC TUDURI</h3>
+                      </article>
+                    </section>
+
+                    <!-- tarjeta tracera -->
+                    <section class="back">
+                      <article class="card__info">
+                        <h3>MARC TUDURI</h3>
+                        <section class="datos">
+                          <p>Edad: 17 años</p>
+                          <p>Altura: 1,72cm</p>
+                        </section>
+                      </article>
+                    </section>
+                  </div>
+                </article>
+
+                <!-- central 2 -->
+                <article class="card">
+                  <!-- contenedor de trajetas -->
+                  <div class="card__container">
+
+                    <!-- tarjeta fontal -->
+                    <section class="front">
+                      <div class="container__img">
+                        <img src="../img/equipo_hover/guim_1.png" alt="Foto del juagador">
+                      </div>
+                      <article class="card__info">
+                        <h3>GUIM GAVALDA</h3>
+                      </article>
+                    </section>
+
+                    <!-- tarjeta tracera -->
+                    <section class="back">
+                      <article class="card__info">
+                        <h3>GUIM GAVALDA</h3>
+                        <section class="datos">
+                          <p>Edad: 17 años</p>
+                          <p>Altura: 1,72cm</p>
+                        </section>
+                      </article>
+                    </section>
+                  </div>
+                </article>
+
+                <!-- central 3 -->
+                <article class="card">
+                  <!-- contenedor de trajetas -->
+                  <div class="card__container">
+
+                    <!-- tarjeta fontal -->
+                    <section class="front">
+                      <div class="container__img">
+                        <img src="../img/equipo_hover/carlos_1.png" alt="Foto del juagador">
+                      </div>
+                      <article class="card__info">
+                        <h3>CARLOS GONZÁLEZ</h3>
+                      </article>
+                    </section>
+
+                    <!-- tarjeta tracera -->
+                    <section class="back">
+                      <article class="card__info">
+                        <h3>CARLOS GONZÁLEZ</h3>
+                        <section class="datos">
+                          <p>Edad: 41 años</p>
+                          <p>Altura: 1,85cm</p>
+                        </section>
+                      </article>
+                    </section>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <!-- Seccion liberos -->
+            <section class="positions">
+              <h2>LIBEROS</h2>
+
+              <div class="cards scroll__button liberos">
+                <!-- libero 1 -->
+                <article class="card">
+                  <!-- contenedor de trajetas -->
+                  <div class="card__container">
+
+                    <!-- tarjeta fontal -->
+                    <section class="front">
+                      <div class="container__img">
+                        <img src="../img/equipo_hover/adri_1.png" alt="Foto del juagador">
+                      </div>
+                      <article class="card__info">
+                        <h3>ADRIAN GIL</h3>
+                      </article>
+                    </section>
+
+                    <!-- tarjeta tracera -->
+                    <section class="back">
+                      <article class="card__info">
+                        <h3>ADRIAN GIL</h3>
+                        <section class="datos">
+                          <p>Edad: 22 años</p>
+                          <p>Altura: 1,66cm</p>
+                        </section>
+                      </article>
+                    </section>
+                  </div>
+                </article>
+
+                <!-- colocador 2 -->
+                <article class="card">
+                  <!-- contenedor de trajetas -->
+                  <div class="card__container">
+
+                    <!-- tarjeta fontal -->
+                    <section class="front">
+                      <div class="container__img">
+                        <img src="../img/equipo_hover/oscar_1.png" alt="Foto del juagador">
+                      </div>
+                      <article class="card__info">
+                        <h3>OSCAR FERNANÉZ</h3>
+                      </article>
+                    </section>
+
+                    <!-- tarjeta tracera -->
+                    <section class="back">
+                      <article class="card__info">
+                        <h3>OSCAR FERNANÉZ</h3>
+                        <section class="datos">
+                          <p>Edad: 36 años</p>
+                          <p>Altura: 1,80cm</p>
+                        </section>
+                      </article>
+                    </section>
+                  </div>
+                </article>
+              </div>
+            </section>
+          </div>
+        </section>
+      </main>
+      <!-- FOOTER -->
+      <footer class="footer">
+        <!-- Contenedor limitados de espacio -->
+        <div class="container">
+          <!-- Nav Menu del footer -->
+          <nav class="footer__nav">
+            <!-- section logo -->
+            <section class="footer__nav__text">
+              <a href="#" class="footer__nav__logo"> cv es castell </a>
+              <p>Fomentando el deporte y los valores con el voleibol.</p>
+            </section>
+            <!-- Section sobre el club -->
+            <section class="footer__nav__club">
+              <h4>El Club</h4>
+              <a href="#" class="footer__club__link"> Directiva </a>
+              <a href="#" class="footer__club__link"> Contactar </a>
+            </section>
+            <!-- Section de los equipos del club -->
+            <section class="footer__nav__equipos">
+              <h4>Equipos</h4>
+              <a href="#" class="footer__club__link"> Senior Maculino </a>
+              <p>Senior Femenino</p>
+              <p>Juvenil</p>
+            </section>
+            <!-- Nuestras redes sociales -->
+            <nav class="footer__nav__redes">
+              <h4>Siguenos</h4>
+              <a
+                href="https://www.instagram.com/cvescastell/"
+                target="_blank"
+                class="footer__nav__social"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="100%"
+                  height="100%"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.25"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"
+                  viewBox="0 0 24 24"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M4 8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"
+                  />
+                  <path d="M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0m7.5-4.5v.01" />
+                </svg>
+              </a>
+              <a
+                href="https://www.youtube.com/@ClubVoleibolEsCastell"
+                target="_blank"
+                class="footer__nav__social"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="100%"
+                  height="100%"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"
+                  viewBox="0 0 24 24"
+                >
+                  <path fill="none" stroke="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M2 8a4 4 0 0 1 4-4h12a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"
+                  />
+                  <path d="m10 9 5 3-5 3z" />
+                </svg>
+              </a>
+            </nav>
+          </nav>
+          <!-- Terminos legales -->
+          <section class="footer__legal">
+            <p>
+              © 2026 Club Voleibol Es Castell. Todos los derechos reservados.
+            </p>
+          </section>
+        </div>
+      </footer>
+    </div>
     <script type="module" src="../src/app.js"></script>
-</body>
+  </body>
 </html>

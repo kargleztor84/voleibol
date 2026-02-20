@@ -1,6 +1,6 @@
-@use './variables' as vb;
-@use './functions';
-@use 'sass:map';
+@use "./variables" as vb;
+@use "./functions";
+@use "sass:map";
 
 // -----------------------------------------------------------------------------
 // This file contains all application-wide Sass mixins.
@@ -42,13 +42,13 @@
   & {
     margin-inline: $value;
   }
-};
+}
 
 // Query para todo -->
 @mixin query($breakpoint) {
-  & { @media screen and (width >= map.get(vb.$breakpoints, $breakpoint)) {
+  @media screen and (width >= map.get(vb.$breakpoints, $breakpoint)) {
     @content;
-  }}
+  }
 }
 
 @mixin btn() {
@@ -67,7 +67,7 @@
 
 @mixin btn-after() {
   &::after {
-    content: '';
+    content: "";
     width: 20px;
     height: 20px;
     position: absolute;
@@ -79,72 +79,52 @@
 }
 
 // CAROUSEL
-@mixin carousel ($anchor-name) {
-  & {
-    display: flex;
-    gap: 30px;
-    margin-bottom: 30px;
+@mixin carousel($anchor-name) {
+  display: flex;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  anchor-name: $anchor-name;
 
-    overflow-x: auto;
-    overscroll-behavior-x: contain;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-    anchor-name: $anchor-name;
+  columns: 1;
+  text-align: center;
 
-    columns: 1;
-    block-size: auto;
-    text-align: start;
+  &::scroll-button(*) {
+    position: fixed;
+    position-anchor: $anchor-name;
+    position-visibility: always;
 
-    &::column {
-      scroll-snap-align: center;
-    }
+    font-family: vb.$text-font-stack;
+    font-size: 30px;
+    background-color: transparent;
+    color: gray;
+    border: none;
+  }
 
-    &::scroll-button(*) {
-      position: fixed;
-      z-index: 5;
-      position-anchor: $anchor-name;
-      position-visibility: always;
-      font-family: vb.$text-font-stack;
-    }
+  &::scroll-button(right) {
+    content: "⟫";
+    position-area: inline-end center;
+  }
 
-    &::scroll-button(right) {
-      position-area: inline-end center;
-      content: '⟩';
-    }
+  &::scroll-button(left) {
+    content: "⟪";
+    position-area: inline-start center;
+  }
 
-    &::scroll-button(left) {
-      position-area: inline-start center;
-      content: '⟨';
-    }
+  &::scroll-button(left):disabled,
+  &::scroll-button(right):disabled {
+    opacity: 0.4;
+    cursor: pointer;
+  }
 
-    &::scroll-button(left), &::scroll-button(right) {
-      padding: 10px 14px;
-      border: none;
-      border-radius: 50%;
-      background-color: transparent;
-      color: #fff;
-      font-weight: 200;
-      font-size: 25px;
-    }
-
-    &::scroll-button(left):disabled, &::scroll-button(right):disabled {
-      opacity: .4;
-      cursor: auto;
-    }
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
-
-    @include query(x-l) {
-      & {
-          gap: 20px;
-      }
-    }
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
 
-@mixin posiciones ($position) {
+// Posiciones ::bofore
+@mixin posiciones($position) {
   &::before {
     content: $position;
     width: max-content;
@@ -153,12 +133,12 @@
     top: 5%;
     left: 50%;
     transform: translateX(-50%);
-    font-size: clamp(140px, 71.43px + 8.93vw, 200px);
+    font-size: clamp(120px, 105.92px + 3.76vw, 160px);
     font-family: vb.$title;
     font-weight: 900;
     letter-spacing: -8px;
     text-transform: uppercase;
-    background-image: linear-gradient(to bottom, transparent , #000 110%);
+    background-image: linear-gradient(to bottom, transparent, #000 110%);
     color: transparent;
     background-clip: text;
     @content;

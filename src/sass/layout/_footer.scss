@@ -1,93 +1,92 @@
-@use '../abstracts' as ab;
-@use '../base/helpers' as hp;
+@use "../abstracts" as ab;
+@use "../base/helpers" as hp;
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
 .border-t {
-    border-top: 1px solid ab.$text-color-secundary;
+  border-top: 1px solid ab.$text-color-secundary;
 }
 
 .footer {
+  color: ab.$text-color-tertiary;
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 14px;
+
+  h4 {
+    color: ab.$text-color;
+    font-size: 20px;
+  }
+
+  a {
     color: ab.$text-color-tertiary;
-    text-align: center;
-    padding-bottom: 20px;
-    font-size: 14px;
+    @extend .hover-event;
+  }
 
-    h4 {
+  &__nav {
+    @extend .border-t;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding-block: 40px;
+
+    // Contenedor del logo ---
+    &__text {
+      // logo --
+      .footer__nav__logo {
         color: ab.$text-color;
-        font-size: 20px;        
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 15px;
+        // padding-bottom: 7px;
+
+        @extend .hover-event;
+      }
+
+      p {
+        width: 200px;
+        margin: 0 auto;
+      }
     }
 
-    a {
-        color: ab.$text-color-tertiary;
-        @extend .hover-event;
+    &__club {
+      a {
+        display: block;
+      }
     }
+
+    &__redes {
+      a {
+        width: 37px;
+      }
+    }
+  }
+
+  // Terminos legales ---
+  &__legal {
+    padding-top: 20px;
+    @extend .border-t;
+  }
+
+  @include ab.query(medium) {
+    text-align: initial;
 
     &__nav {
-        @extend .border-t;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 20px;
-        padding-block: 40px;
+      grid-template-columns: repeat(4, 1fr);
+      place-items: baseline;
 
-        // Contenedor del logo ---
-        &__text {
-            // logo --
-            .footer__nav__logo {
-                color: ab.$text-color;
-                text-transform: uppercase;
-                font-size: 20px;
-                font-weight: 900;
-                line-height: 15px;
-                // padding-bottom: 7px;
-    
-                @extend .hover-event;
-            }
+      &__club {
+        justify-self: center;
+      }
 
-            p {
-                width: 200px;
-                margin: 0 auto;
-            }
-        }
+      &__equipos {
+        justify-self: center;
+      }
 
-        &__club {
-            a {
-                display: block;
-            }
-        }
-
-        &__redes {
-
-            a {
-                width: 37px;
-            }
-        }
+      &__redes {
+        justify-self: end;
+      }
     }
-
-    // Terminos legales ---
-    &__legal {
-        padding-top: 20px;
-        @extend .border-t;
-    }
-
-    @include ab.query(medium) {
-        text-align: initial;
-
-        &__nav {
-            grid-template-columns: repeat(4, 1fr);
-            place-items: baseline;
-
-            &__club {
-                justify-self: center;
-            }
-
-            &__equipos {
-                justify-self: center;
-            }
-
-            &__redes {
-                justify-self: end;
-            }
-        }
-    }
+  }
 }
