@@ -5,22 +5,26 @@
 .main {
   // HERO SECTION -->
   &__hero {
+    position: relative;
     font-size: ab.$size-text;
-    background-image:
-      linear-gradient(to bottom, #ffffff00 10%, #000),
-      url(../../../img/hero.jpg);
+    background-image: linear-gradient(to bottom, #ffffff00 10%, #000);
+
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
     height: clamp(667px, 579.68px + 23.29vw, 915px);
-    display: grid;
-    align-content: center;
+    display: flex;
+    align-items: center;
     padding-top: 60px;
 
-    // Contenedor de eapaceado ---
-    .container {
-      display: grid;
-      text-align: center;
+    .bg-video {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
     }
 
     // Titulo encima del encabezado --
@@ -33,7 +37,6 @@
       border: 0.5px solid ab.$yellow-op;
       padding-right: 10px;
       background-color: ab.$bg-btn;
-      @include ab.inline();
       margin-bottom: ab.m-all("suma", 5);
 
       display: grid;
@@ -44,7 +47,6 @@
     // Encabezado h1 title --
     &__title {
       max-width: 555px;
-      @include ab.inline();
       font-family: ab.$title;
       font-size: ab.$size-title;
       font-weight: 900;
@@ -52,6 +54,7 @@
       letter-spacing: -2px;
       text-transform: uppercase;
       color: ab.$heading-color;
+      margin-bottom: 15px;
     }
 
     // Span dentro del h1 -
@@ -80,18 +83,9 @@
       @include ab.inline();
     }
 
-    // Texto debajo del encabezado --
-    &__text {
-      max-width: 280px;
-      font-weight: 600;
-      @include ab.inline();
-      margin-bottom: ab.m-all("suma", 10);
-    }
-
     // Contenedor de botones --
     &__container {
       width: clamp(250px, -179.39px + 114.5vw, 700px);
-      @include ab.inline();
     }
 
     // Estilos generales de los botones --
@@ -346,9 +340,9 @@
       justify-content: center;
       gap: 30px;
 
-			article {
-				display: grid;
-			}
+      article {
+        display: grid;
+      }
 
       img {
         mask-image: linear-gradient(black 90%, transparent);
@@ -563,10 +557,22 @@
   // SECCION MAPS -->
   &__maps {
     padding-block: ab.$mb-sections;
+    .maps {
+      border-radius: 15px;
+    }
+
+    @include ab.query(medium) {
+      .container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+    }
+
     p {
       max-width: 400px;
+      font-size: 20px;
       letter-spacing: 1px;
-      text-align: center;
       margin-inline: auto;
       margin-bottom: 30px;
 
