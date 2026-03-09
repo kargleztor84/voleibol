@@ -174,16 +174,40 @@
   }
 }
 
-.carousel {
-  overflow-x: auto;
-  overscroll-behavior-x: contain;
-  scroll-snap-type: x mandatory;
-  anchor-name: --colocadores;
+// .carousel {
+//   overflow-x: auto;
+//   overscroll-behavior-x: contain;
+//   scroll-snap-type: x mandatory;
+//   anchor-name: --colocadores;
 
-  columns: 1;
-  text-align: center;
+//   columns: 1;
+//   text-align: center;
 
-  &::column {
-    scroll-snap-align: center;
+//   &::column {
+//     scroll-snap-align: center;
+//   }
+// }
+
+.after-puntos {
+  &::before {
+    content: '';
+    width: 25%;
+    height: 75%;
+    position: absolute;
+    top: 12%;
+    left: 0;
+    background-image: url(../../../img/punto.png);
+  }
+  
+  &::after {
+    content: '';
+    width: 25%;
+    height: 75%;
+    position: absolute;
+    top: 12%;
+    right: 0;
+    background-image: url(../../../img/punto.png);
   }
 }
+
+

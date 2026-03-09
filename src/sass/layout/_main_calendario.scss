@@ -1,0 +1,93 @@
+@use "../abstracts" as ab;
+@use "../base/helpers" as hp;
+
+.hero__calendar {
+  height: clamp(470px, 307.79px + 43.257vw, 640px);
+  background-image:
+    linear-gradient(to bottom, #ffffff00 10%, #000), url(../../../img/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 20%;
+  margin-top: 60px;
+  display: grid;
+  align-items: center;
+
+  p {
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+
+  .hero__title {
+    text-transform: uppercase;
+    font-family: ab.$title;
+    font-size: ab.$size-title;
+    line-height: ab.$line-title;
+  }
+}
+
+.calendar__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .vuelta1,
+  .vuelta2 {
+    z-index: 5;
+  }
+}
+
+.posiciones {
+  margin: 0 auto;
+}
+
+.main__calendar,
+.main__positions {
+  position: relative;
+  font-size: clamp(12px, 6.27px + 1.53vw, 18px);
+  text-align: center;
+  text-transform: uppercase;
+
+  h2 {
+    padding: 15px 0;
+    color: #701c83;
+    font-size: clamp(22px, 4.82px + 4.58vw, 40px);
+  }
+
+  thead {
+    color: ab.$amarillo;
+  }
+
+  tbody tr:nth-child(odd) {
+    background-color: #1d5bc63b;
+  }
+
+  table,
+  th,
+  td {
+    border-collapse: collapse;
+  }
+
+  table {
+    margin-bottom: 30px;
+  }
+
+  th,
+  td {
+    padding: 15px 5px;
+  }
+
+  padding-block: 50px;
+  background-image: radial-gradient(at center, #49484893 -40%, #020202 70%);
+
+  @extend .after-puntos;
+}
+
+@include ab.query(medium) {
+  .main__calendar,
+  .main__positions {
+    th,
+    td {
+      padding: 16px;
+    }
+  }
+}
